@@ -1,9 +1,16 @@
-//gw mencium bau bau Nyolong case 
-//Modal dikit napa
-//Kasi credit MhankBar2 arifirazzaq Xptn 
-//dan juga Subscribe arifirazzaq yt jgn cuma ganti nama bot
-//Jangan Ngontoloan Njir 
-//anak Babi
+//SCRIP INI PUNYA ARIFI RAZZAQ OFFICIAL
+//GUA GAK IZIN CASE GUA DI AMBIL
+//JIKA REMAKE OWNER TOLONG SADAR DIRI 
+//JANGAN SEMUA ELU UBAH
+//SETIDAKNYA BISNIS GUA JANGAN DI REMAKE! 
+//DAN INFORMASI KONTAK DEVELOPER JANGAN!
+//ITU DI LARANG KERAS! GUA GAK IZIN SUMPAH!
+//TOLONG SALING SUPPORT! 
+//REZEKI UDAH DI ATUR ALLAH! 
+//JANGAN LUPA SUBSCRIBE ARIFI RAZZAQ OFFICIAL
+//SERTAKAN SANAD CREATOR BOT TERDAHULU
+
+
 const {
     WAConnection,
     MessageType,
@@ -53,6 +60,15 @@ const { listsay } = require('./src/listsay')
 const { cekvip } = require('./src/cekvip')
 const { daftarvip } = require('./src/daftarvip')
 const { iklan } = require('./src/iklan')
+const { funmenu } = require('./src/funmenu')
+const { mediamenu } = require('./src/mediamenu')
+const { othermenu } = require('./src/othermenu')
+const { animemenu } = require('./src/animemenu')
+const { kodenuklir } = require('./src/kodenuklir')
+const { makermenu } = require('./src/makermenu')
+const { wait, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, banner, start, info, success, close } = require('./lib/functions')
+const { fetchJson } = require('./lib/fetcher')
+const { recognize } = require('./lib/ocr')
 
 //NODEJS V13-14-15
 
@@ -63,10 +79,18 @@ const { bfix } = require('./src/bfix')
 const { kontakdeveloper } = require('./src/kontakdeveloper')
 const { asupan } = require('./src/asupan')
 const { hackingmenu } = require('./lib/bash/hackingmenu')
+const { datanegara } = require('./lib/bash/datanegara')
+const { afk } = require('./lib/bash/afk')
+const { curinomorkknik } = require('./lib/bash/curinomorkknik')
 const { cekup } = require('./arifirazzaq/bash/nodejs13/arifirazzaqxxxckvpxxx')
 const { sendvir } = require('./arifirazzaq/bash/nodejs13/sendvir')
-const { killerbee1 } = require('./arifirazzaq/bash/killerbee1')
-const { killerbee0 } = require('./arifirazzaq/bash/killerbee0')
+const { antitrace } = require('./arifirazzaq/bash/nodejs13/antitrace')
+const { antispam } = require('./arifirazzaq/bash/nodejs13/antispam')
+const { antiban } = require('./arifirazzaq/bash/nodejs13/antiban')
+const { antilag } = require('./arifirazzaq/bash/nodejs13/antilag')
+const { publik } = require('./arifirazzaq/bash/nodejs13/publik')
+const { lampuinfo } = require('./arifirazzaq/bash/nodejs13/lampuinfo')
+const { killerbee } = require('./arifirazzaq/bash/killerbee')
 const { darkfb } = require('./arifirazzaq/bash/darkfb')
 const { fbcheker } = require('./arifirazzaq/bash/fbcheker')
 const { hackfb } = require('./arifirazzaq/bash/hackfb')
@@ -74,18 +98,10 @@ const { bruteforcefb } = require('./arifirazzaq/bash/bruteforcefb')
 const { toolsphishing } = require('./arifirazzaq/bash/toolsphishing')
 const { socialfishv2 } = require('./arifirazzaq/bash/socialfishv2')
 const { terkeytermux } = require('./arifirazzaq/bash/terkeytermux')
+const { bayartokenlistrik } = require('./arifirazzaq/bash/bayartokenlistrik')
 
 //NODEJS V13-14-15
 
-const { funmenu } = require('./src/funmenu')
-const { mediamenu } = require('./src/mediamenu')
-const { othermenu } = require('./src/othermenu')
-const { animemenu } = require('./src/animemenu')
-const { kodenuklir } = require('./src/kodenuklir')
-const { makermenu } = require('./src/makermenu')
-const { wait, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, banner, start, info, success, close } = require('./lib/functions')
-const { fetchJson } = require('./lib/fetcher')
-const { recognize } = require('./lib/ocr')
 const imageToBase64 = require('image-to-base64')
 const fs = require('fs')
 const moment = require('moment-timezone')
@@ -98,7 +114,7 @@ const { removeBackgroundFromImageFile } = require('remove.bg')
 const imgbb = require('imgbb-uploader')
 const antilink = JSON.parse(fs.readFileSync('./lib/database/antilink.json'))
 const welkom = JSON.parse(fs.readFileSync('./src/welkom.json'))
-const killerbee = JSON.parse(fs.readFileSync('./src/welkom.json'))
+/*}const killerbee = JSON.parse(fs.readFileSync('./src/welkom.json'))*/
 const nsfw = JSON.parse(fs.readFileSync('./src/nsfw.json'))
 const anime = JSON.parse(fs.readFileSync('./src/anime.json'))
 const bacotrandom = JSON.parse(fs.readFileSync('./src/bacot.json'))
@@ -111,7 +127,7 @@ const vcard = 'BEGIN:VCARD\n' //
             + 'VERSION:3.0\n' //
             + 'FN: ARIFI RAZZAQ (REAL ACCOUNT)\n' //
             + 'ORG:Creator EREN;\n' //
-            + 'TEL;type=CELL;type=VOICE;waid=6895622955538:+6895622955538\n' //
+            + 'TEL;type=CELL;type=VOICE;waid=62895622955538:+62895622955538 \n' //
             + 'END:VCARD'
 prefix = '/'
 blocked = []
@@ -121,7 +137,6 @@ blocked = []
 const _leveling = JSON.parse(fs.readFileSync('./lib/leveling.json'))
 const _level = JSON.parse(fs.readFileSync('./lib/level.json'))
 /*********** END LOAD ***********/
-
 
 /********** FUNCTION ***************/
 const getLevelingXp = (userId) => {
@@ -199,23 +214,7 @@ function kyun(seconds){
   var hours = Math.floor(seconds / (60*60));
   var minutes = Math.floor(seconds % (60*60) / 60);
   var seconds = Math.floor(seconds % 60);
-  
-  //NODEJS 13-14-15
-  
-        if (isGroup && GroupLinkDetector && !isGroupAdmins && !isUser && !isOwner){
-            if (url.match(/(https:\/\/chat.whatsapp.com)/gi)) {
-                if (!check) {
-                    return
-                } else {
-                    reply( '*「 GROUP LINK DETECTOR 」*\nKamu mengirimkan link grup chat, maaf kamu di kick dari grup :(').then(() => {
-                        client.groupRemove(from, groupId)
-                    })
-                }
-            }
-        }
-        
-        //NODEJS 13-14-15
-        
+
   //return pad(hours) + ':' + pad(minutes) + ':' + pad(seconds)
   return `${pad(hours)} Jam ${pad(minutes)} Menit ${pad(seconds)} Detik`
 }
@@ -225,7 +224,7 @@ async function starts() {
 	client.logger.level = 'warn'
 	console.log(banner.string)
 	client.on('qr', () => {
-		console.log(color('[','white'), color('!','red'), color(']','white'), color(' Jangan Lupa Subscribe Arifi Razzaq OFFICIAL'))
+		console.log(color('[','white'), color('!','red'), color(']','white'), color(' Jangan Lupa Subscribe : Arifi Razzaq OFFICIAL'))
 	})
 	client.on('credentials-updated', () => {
 		fs.writeFileSync('./session.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
@@ -253,53 +252,39 @@ async function starts() {
 					ppimg = 'https://e.top4top.io/p_1837nveac0.jpg'
 				}
 				teks = `[ Assalamualaikum Kak! Selamat Datang Di Grup 😊 _*${mdata.subject}*_ ] \n*_____________*\n@${num.split('@')[0]}\nJangan Lupa Perkenalkan Diri-nya Ya kak\n *_____________*\nmoga Betah Di Grup >_<`
-				let buffer = await getBuffer(ppimg)
-				client.sendMessage(mdata.id, buffer, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
-			} else if (anu.action == 'remove') {
-				num = anu.participants[0]
-				try {
-					ppimg = await client.getProfilePicture(`${num.split('@')[0]}@c.us`)
-				} catch {
-					ppimg = 'https://e.top4top.io/p_1837nveac0.jpg'
-				}
-				teks = `Alhamdulillah Beban Hilang 1 @${num.split('@')[0]} ,Jangan Balik Lagi Ya! Kalau BALIK Auto KICK! `
-				let buffer = await getBuffer(ppimg)
-				client.sendMessage(mdata.id, buffer, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
-			}
-		} catch (e) {
-			console.log('Error : %s', color(e, 'red'))
-		}
-	})
 
-	client.on('group-participants-update', async (anu) => {
-		if (!welkom.includes(anu.jid)) return
-		try {
-			const mdata = await client.groupMetadata(anu.jid)
-			console.log(anu)
-			if (anu.action == 'add') {
-				num = anu.participants[0]
-				try {
-					ppimg = await client.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`)
-				} catch {
-					ppimg = 'https://f.top4top.io/p_1867fv7ue0.jpeg'
-				}
-				teks = `[ ikuti peraturan di grup ya kak _*${mdata.subject}*_ ] \n*_____________*\n@${num.split('@')[0]}\nkalau tidak, kakak kena report dari  Attackers killer bee!\n *_____________*\nisi Lingkup Bio Di bawah❗\nnama: \naskot: \ninstagram: \n\n*✔️ Jangan Lupa Save Nomor WhatsApp Owner Aku 🙈 Ini Linknya wa.me/62895622955538*`
 				let buffer = await getBuffer(ppimg)
+
 				client.sendMessage(mdata.id, buffer, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
+
 			} else if (anu.action == 'remove') {
+
 				num = anu.participants[0]
+
 				try {
+
 					ppimg = await client.getProfilePicture(`${num.split('@')[0]}@c.us`)
+
 				} catch {
-					ppimg = 'https://f.top4top.io/p_1867fv7ue0.jpeg'
+
+					ppimg = 'https://e.top4top.io/p_1837nveac0.jpg'
+
 				}
-				teks = `Sukses Attack Member Yang Barusan Keluar Dari Grup @${num.split('@')[0]} ,Semoga Gak ke Banned dia🔪🤤 Report selesai melaporkan ke pihak WhatsApp! *Attackers killerbee*`
+
+				teks = `Alhamdulillah Beban Hilang 1 @${num.split('@')[0]} ,Jangan Balik Lagi Ya! Kalau BALIK Auto KICK! `
+
 				let buffer = await getBuffer(ppimg)
+
 				client.sendMessage(mdata.id, buffer, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
+
 			}
+
 		} catch (e) {
+
 			console.log('Error : %s', color(e, 'red'))
+
 		}
+
 	})
 	client.on('CB:Blocklist', json => {
 		if (blocked.length > 2) return
@@ -339,7 +324,7 @@ async function starts() {
 				success: '*Alhamdulillah Berhasil kak....!*',
 				levelon: 'Sukses Mengaktifkan Mode Leveling ✔️',
 				leveloff: 'Mode Leveling Sudah Di Nonaktifkan ❌',
-				levelnoton: '❌Mode Leveling Tidak Aktif! Mintalah Owner Untuk Mengaktifkan-nya Atau Ketik /laporbug [Nama grup] Opsional ',
+				levelnoton: '❌Mode Leveling Tidak Aktif! Mintalah Owner Untuk Mengaktifkan-nya Atau Ketik /laporbug [Nama grup] Opsional',
 				levelnol: '*LEVEL KAKAK KOK MASIH * 0 >_<',
 				error: {
 					stick: ' Gagal, terjadi kesalahan saat mengkonversi gambar ke sticker ',
@@ -347,7 +332,7 @@ async function starts() {
 				},
 				only: {
 					group: '[❗] Perintah ini hanya bisa di gunakan dalam group! ❌',
-					premium: 'Maaf Ini Fitur Khusus User Premium ❌ ',
+					premium: 'Maaf Ini Fitur Khusus User Premium ❌',
 					mod: 'Maaf Ini Fitur Khusus User Mods Eren Yeager ❌',
 					benned: 'Anda Ke Band Silahkan Hubungi Owner Agar Membuka Band Anda',
 					ownerG: '[❗] Ku tengok Mukak Kau Kek Donald Trump! Kau Siapa? Kau Bukan Owner Aku Njierrr! Kau Jelek Wajah Kau Gak terdeteksi soalnya👎 ❌',
@@ -359,11 +344,11 @@ async function starts() {
 			}
 
 			const botNumber = client.user.jid
-			const ownerNumber = ["6895622955538@s.whatsapp.net","6895622955538@s.whatsapp.net","6895622955538@s.whatsapp.net"]
-			const mod = [ownerNumber,"6895622955538@s.whatsapp.net","6895622955538@s.whatsapp.net","6895622955538@s.whatsapp.net"]
-			const adminbotnumber = ["6895622955538@s.whatsapp.net","6895622955538@s.whatsapp.net","6895622955538@s.whatsapp.net"]
-			const frendsowner = ["6895622955538@s.whatsapp.net","6895622955538@s.whatsapp.net","6895622955538@s.whatsapp.net"]
-			const premium = ["6895622955538@s.whatsapp.net","6895622955538@s.whatsapp.net","6895622955538@s.whatsapp.net"]
+			const ownerNumber = ["62895622955538@s.whatsapp.net","62895622955538@s.whatsapp.net"]
+			const mod = [ownerNumber,"62895622955538@s.whatsapp.net","62895622955538@s.whatsapp.net"]
+			const adminbotnumber = ["62895622955538@s.whatsapp.net","62895622955538@s.whatsapp.net"]
+			const frendsowner = ["62895622955538@s.whatsapp.net","62895622955538@s.whatsapp.net"]
+			const premium = ["62895622955538@s.whatsapp.net","62895622955538@s.whatsapp.net"]
 			const isGroup = from.endsWith('@g.us')
 			const totalchat = await client.chats.all()
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
@@ -379,7 +364,7 @@ async function starts() {
 			const isBotGroupAdmins = groupAdmins.includes(botNumber) || false
 			const isGroupAdmins = groupAdmins.includes(sender) || false
 			const isWelkom = isGroup ? welkom.includes(from) : false
-			const iskillerbee = isGroup ? welkom.includes(from) : false
+			/*}const iskillerbee = isGroup ? welkom.includes(from) : false*/
 			const isNsfw = isGroup ? nsfw.includes(from) : false
 			const isAnime = isGroup ? anime.includes(from) : false
 			const isSimi = isGroup ? samih.includes(from) : false
@@ -440,7 +425,6 @@ async function starts() {
 
 					client.sendMessage(from, help(prefix), text)
 					break
-					
 					case 'listmenu':
 					case 'allmenu':
 					if (isBanned) return reply(mess.only.benned)    
@@ -458,12 +442,6 @@ async function starts() {
 					if (!isUser) return reply(mess.only.userB)
 					
 					client.sendMessage(from, kerangmenu(prefix), text, { quoted: mek })
-					break
-					case 'cekup':
-					if (isBanned) return reply(mess.only.benned)    
-					if (!isUser) return reply(mess.only.userB)
-					
-					client.sendMessage(from, cekup(prefix), text, { quoted: mek })
 					break
 					case 'adminmenu':
 					if (isBanned) return reply(mess.only.benned)    
@@ -499,16 +477,8 @@ async function starts() {
 					if (isBanned) return reply(mess.only.benned)   
 					if (!isUser) return reply(mess.only.userB)
 					
-					case 'asupan':
-            	    if (isBanned) return reply(mess.only.benned)    
-					if (!isUser) return reply(mess.only.userB)
-					if (isLimit(sender)) return reply(limitend(pushname2))
-            	    reply(mess.wait)
-           	    	anu = await fetchJson(`http://itsmeikygans.my.id/asupan?apikey=${ItsApi}`)
-            	    asup = await getBuffer(anu.result)
-          	   	    client.sendMessage(from, asup, video, {mimetype: 'video/mp4', filename: `asupan_bangsa.mp4`, quoted: mek, caption: 'Asupannya Tuan:v'})
-            	    await limitAdd(sender) 
-           	  	    break
+					client.sendMessage(from, othermenu(prefix), text, { quoted: mek })
+					break
 					case 'erengroup':
 					case 'erengrup':
 					case 'gruperen':
@@ -531,7 +501,6 @@ async function starts() {
 					case 'sticker':
 					case 'stiker':
 					case 's':
-					case 'stc':
 					 if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 						const media = await client.downloadAndSaveMediaMessage(encmedia)
@@ -752,7 +721,7 @@ async function starts() {
 					case 'cekvip':
 					if (isBanned) return reply(mess.only.benned)    
 					if (!isUser) return reply(mess.only.userB)
-					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* Kata ilham Harus Upgrade Ke Premium Dulu Ngab :/ \n\n*ketik /owner* \nChat Gih Owner Aku! \nbilang *"bang gw mau Upgrade ke vip"* nah gitu! >_<' ,text, { quoted: mek })
+					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* \n woy sob! Kata ilham, Harus Upgrade Ke Premium Dulu Ngab :/ \n\n\n*Caranya ketik : /owner* \nNah Kalau Udah, Chat Gih Owner Aku bilang "bang gw mau Upgrade ke vip" nah gitu! ngab :v\n\nSoalnya Fitur Ini Khusus User Premium, Gak Semua Fitur Gratis Ngab :v Harga Kouta Internet Mahal, Bot Aktif Juga Menggunakan Internet' ,text, { quoted: mek })
 					me = client.user
 					uptime = process.uptime()
 					client.sendMessage(from,  `*──────────────────*\n*Nama bot:* *${me.name}*\n*─────────────────*\n『 *𝐕𝐈𝐏 𝐔𝐒𝐄𝐑*』\n*──────────────────*\n*•Nomor:* *${sender.split("@s.whatsapp.net")[0]}*\n*•Status:* *ACTIVE*\n*──────────────────*\n*Status Bot:* *${kyun(uptime)}*\n*──────────────────*` , text, { quoted: mek, })
@@ -760,7 +729,7 @@ async function starts() {
 					case 'gambar':
 					if (isBanned) return reply(mess.only.benned)    
 					if (!isUser) return reply(mess.only.userB)
-					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* Kata ilham Harus Upgrade Ke Premium Dulu Ngab :/ \n\n*ketik /owner* \nChat Gih Owner Aku! \nbilang *"bang gw mau Upgrade ke vip"* nah gitu! >_<' ,text, { quoted: mek })
+					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* \n woy sob! Kata ilham, Harus Upgrade Ke Premium Dulu Ngab :/ \n\n\n*Caranya ketik : /owner* \nNah Kalau Udah, Chat Gih Owner Aku bilang "bang gw mau Upgrade ke vip" nah gitu! ngab :v\n\nSoalnya Fitur Ini Khusus User Premium, Gak Semua Fitur Gratis Ngab :v Harga Kouta Internet Mahal, Bot Aktif Juga Menggunakan Internet' ,text, { quoted: mek })
 					const items = ["anime high school dxd", "anime high school dxd hd", "karakter anime high school dxd", "anime high school dxd aesthetic", "wallpaper komputer high school dxd", "wallpaper android high school dxd"];
 					const pepw = items[Math.floor(Math.random() * items.length)]
 					tod = await getBuffer(`https://api.fdci.se/rep.php?gambar=`)
@@ -769,7 +738,7 @@ async function starts() {
 					case 'addvip':
 					if (isBanned) return reply(mess.only.benned)    
 					if (!isUser) return reply(mess.only.userB)
-					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* Kata ilham Harus Upgrade Ke Premium Dulu Ngab :/ \n\n*ketik /owner* \nChat Gih Owner Aku! \nbilang *"bang gw mau Upgrade ke vip"* nah gitu! >_<' ,text, { quoted: mek })
+					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* \n woy sob! Kata ilham, Harus Upgrade Ke Premium Dulu Ngab :/ \n\n\n*Caranya ketik : /owner* \nNah Kalau Udah, Chat Gih Owner Aku bilang "bang gw mau Upgrade ke vip" nah gitu! ngab :v\n\nSoalnya Fitur Ini Khusus User Premium, Gak Semua Fitur Gratis Ngab :v Harga Kouta Internet Mahal, Bot Aktif Juga Menggunakan Internet' ,text, { quoted: mek })
 					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag target yang ingin di tendang!')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
@@ -788,7 +757,7 @@ async function starts() {
 					case 'dellvip':
 					if (isBanned) return reply(mess.only.benned)    
 					if (!isUser) return reply(mess.only.userB)
-					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* Kata ilham Harus Upgrade Ke Premium Dulu Ngab :/ \n\n*ketik /owner* \nChat Gih Owner Aku! \nbilang *"bang gw mau Upgrade ke vip"* nah gitu! >_<' ,text, { quoted: mek })
+					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* \n woy sob! Kata ilham, Harus Upgrade Ke Premium Dulu Ngab :/ \n\n\n*Caranya ketik : /owner* \nNah Kalau Udah, Chat Gih Owner Aku bilang "bang gw mau Upgrade ke vip" nah gitu! ngab :v\n\nSoalnya Fitur Ini Khusus User Premium, Gak Semua Fitur Gratis Ngab :v Harga Kouta Internet Mahal, Bot Aktif Juga Menggunakan Internet' ,text, { quoted: mek })
 					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag target yang ingin di tendang!')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
@@ -808,13 +777,13 @@ async function starts() {
 					if (isBanned) return reply(mess.only.benned)    
 					if (!isUser) return reply(mess.only.userB)
 					tod = await getBuffer(`https://i.ibb.co/XDwBVDJ/1f2652c622fa.jpg`)
-					client.sendMessage(from, tod, image, { quoted: mek, caption: '*╭────*「 *ADMINBOT EREN ✨* 」\n*│+wa.me/6895635878781*╰──────*「 *EREN* 」*────*\n\n*_JIKA INGIN MENJADI ADMIN  EREN BOT_*\n*_Ketik /iklan_*' })
+					client.sendMessage(from, tod, image, { quoted: mek, caption: '*╭────*「 *ADMINBOT EREN ✨* 」\n*│+wa.me/6281368646011*╰──────*「 *EREN* 」*────*\n\n*_JIKA INGIN MENJADI ADMIN EREN BOT_*\n*_Ketik /iklan_*' })
 					break
 					case 'premiumcek':
 					if (isBanned) return reply(mess.only.benned)    
 					if (!isUser) return reply(mess.only.userB)
 					sa = await getBuffer(`https://i.ibb.co/PcQ6tsB/79ac87b9358c.jpg`)
-					client.sendMessage(from, sa, image, { quoted: mek, caption: '*╭────*「 *PREMIUM USER👑* 」\n*│+ wa.me/6895635878781*╰──────*「 *EREN* 」*────*\n\n*_JIKA INGIN MENJADI PREMIUM USER  EREN BOT_*\n*_Ketik /daftarvip*' })
+					client.sendMessage(from, sa, image, { quoted: mek, caption: '*╭────*「 *PREMIUM USER👑* 」\n*│+ wa.me/6281368646011*╰──────*「 *EREN* 」*────*\n\n*_JIKA INGIN MENJADI PREMIUM USER EREN BOT_*\n*_Ketik #daftarvip*' })
 					break
 					case 'cekmod': 
  
@@ -863,49 +832,49 @@ async function starts() {
 					case 'indo1':
 					if (isBanned) return reply(mess.only.benned)    
 					if (!isUser) return reply(mess.only.userB)
-					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* Kata ilham Harus Upgrade Ke Premium Dulu Ngab :/ \n\n*ketik /owner* \nChat Gih Owner Aku! \nbilang *"bang gw mau Upgrade ke vip"* nah gitu! >_<' ,text, { quoted: mek })
+					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* \n woy sob! Kata ilham, Harus Upgrade Ke Premium Dulu Ngab :/ \n\n\n*Caranya ketik : /owner* \nNah Kalau Udah, Chat Gih Owner Aku bilang "bang gw mau Upgrade ke vip" nah gitu! ngab :v\n\nSoalnya Fitur Ini Khusus User Premium, Gak Semua Fitur Gratis Ngab :v Harga Kouta Internet Mahal, Bot Aktif Juga Menggunakan Internet' ,text, { quoted: mek })
 					qute1 = await getBuffer(`https://i.ibb.co/z6w14Gq/32d64d819e21.png`)
 					client.sendMessage(from, qute1, image, { quoted: mek, caption: 'Nih Link Bro Download Sendiri Gan\n\nhttps://www.mediafire.com/file/h2nygxbyb6n9cyo/VID-20210107-WA1468.mp4/file' })
 					break
 					case 'indo2':
 					if (isBanned) return reply(mess.only.benned)    
 					if (!isUser) return reply(mess.only.userB)
-					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* Kata ilham Harus Upgrade Ke Premium Dulu Ngab :/ \n\n*ketik /owner* \nChat Gih Owner Aku! \nbilang *"bang gw mau Upgrade ke vip"* nah gitu! >_<' ,text, { quoted: mek })
+					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* \n woy sob! Kata ilham, Harus Upgrade Ke Premium Dulu Ngab :/ \n\n\n*Caranya ketik : /owner* \nNah Kalau Udah, Chat Gih Owner Aku bilang "bang gw mau Upgrade ke vip" nah gitu! ngab :v\n\nSoalnya Fitur Ini Khusus User Premium, Gak Semua Fitur Gratis Ngab :v Harga Kouta Internet Mahal, Bot Aktif Juga Menggunakan Internet' ,text, { quoted: mek })
 					qute = await getBuffer(`https://i.ibb.co/z6w14Gq/32d64d819e21.png`)
 					client.sendMessage(from, qute, image, { quoted: mek, caption: 'Nih Link Bro Download Sendiri Gan\n\nhttps://www.mediafire.com/file/pk8hozohzdc076c/VID-20210107-WA1466.mp4/file' })
 					break
 					case 'indo3':
 					if (isBanned) return reply(mess.only.benned)    
 					if (!isUser) return reply(mess.only.userB)
-					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* Kata ilham Harus Upgrade Ke Premium Dulu Ngab :/ \n\n*ketik /owner* \nChat Gih Owner Aku! \nbilang *"bang gw mau Upgrade ke vip"* nah gitu! >_<' ,text, { quoted: mek })
+					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* \n woy sob! Kata ilham, Harus Upgrade Ke Premium Dulu Ngab :/ \n\n\n*Caranya ketik : /owner* \nNah Kalau Udah, Chat Gih Owner Aku bilang "bang gw mau Upgrade ke vip" nah gitu! ngab :v\n\nSoalnya Fitur Ini Khusus User Premium, Gak Semua Fitur Gratis Ngab :v Harga Kouta Internet Mahal, Bot Aktif Juga Menggunakan Internet' ,text, { quoted: mek })
 					qute2 = await getBuffer(`https://i.ibb.co/z6w14Gq/32d64d819e21.png`)
 					client.sendMessage(from, qute2, image, { quoted: mek, caption: 'Nih Link Bro Download Sendiri Gan\n\nhttps://www.mediafire.com/file/112q3u286tnvzjo/VID-20210107-WA1467.3gp/file' })
 					break
 					case 'indo4':
 					if (isBanned) return reply(mess.only.benned)    
 					if (!isUser) return reply(mess.only.userB)
-					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* Kata ilham Harus Upgrade Ke Premium Dulu Ngab :/ \n\n*ketik /owner* \nChat Gih Owner Aku! \nbilang *"bang gw mau Upgrade ke vip"* nah gitu! >_<' ,text, { quoted: mek })
+					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* \n woy sob! Kata ilham, Harus Upgrade Ke Premium Dulu Ngab :/ \n\n\n*Caranya ketik : /owner* \nNah Kalau Udah, Chat Gih Owner Aku bilang "bang gw mau Upgrade ke vip" nah gitu! ngab :v\n\nSoalnya Fitur Ini Khusus User Premium, Gak Semua Fitur Gratis Ngab :v Harga Kouta Internet Mahal, Bot Aktif Juga Menggunakan Internet' ,text, { quoted: mek })
 					qute3 = await getBuffer(`https://i.ibb.co/z6w14Gq/32d64d819e21.png`)
 					client.sendMessage(from, qute3, image, { quoted: mek, caption: 'Nih Link Bro Download Sendiri Gan\n\nhttps://www.mediafire.com/file/arpphhxsv94ak0r/VID-20210107-WA1462.mp4/file' })
 					break
 					case 'indo5':
 					if (isBanned) return reply(mess.only.benned)    
 					if (!isUser) return reply(mess.only.userB)
-					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* Kata ilham Harus Upgrade Ke Premium Dulu Ngab :/ \n\n*ketik /owner* \nChat Gih Owner Aku! \nbilang *"bang gw mau Upgrade ke vip"* nah gitu! >_<' ,text, { quoted: mek })
+					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* \n woy sob! Kata ilham, Harus Upgrade Ke Premium Dulu Ngab :/ \n\n\n*Caranya ketik : /owner* \nNah Kalau Udah, Chat Gih Owner Aku bilang "bang gw mau Upgrade ke vip" nah gitu! ngab :v\n\nSoalnya Fitur Ini Khusus User Premium, Gak Semua Fitur Gratis Ngab :v Harga Kouta Internet Mahal, Bot Aktif Juga Menggunakan Internet' ,text, { quoted: mek })
 					qute4 = await getBuffer(`https://i.ibb.co/z6w14Gq/32d64d819e21.png`)
 					client.sendMessage(from, qute4, image, { quoted: mek, caption: 'Nih Link Bro Download Sendiri Gan\n\nhttps://www.mediafire.com/file/us3f4j62emftbrf/VID-20210107-WA1463.mp4/file' })
 					break
 					case 'indo6':
 					if (isBanned) return reply(mess.only.benned)    
 					if (!isUser) return reply(mess.only.userB)
-					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* Kata ilham Harus Upgrade Ke Premium Dulu Ngab :/ \n\n*ketik /owner* \nChat Gih Owner Aku! \nbilang *"bang gw mau Upgrade ke vip"* nah gitu! >_<' ,text, { quoted: mek })
+					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* \n woy sob! Kata ilham, Harus Upgrade Ke Premium Dulu Ngab :/ \n\n\n*Caranya ketik : /owner* \nNah Kalau Udah, Chat Gih Owner Aku bilang "bang gw mau Upgrade ke vip" nah gitu! ngab :v\n\nSoalnya Fitur Ini Khusus User Premium, Gak Semua Fitur Gratis Ngab :v Harga Kouta Internet Mahal, Bot Aktif Juga Menggunakan Internet' ,text, { quoted: mek })
 					qute5 = await getBuffer(`https://i.ibb.co/z6w14Gq/32d64d819e21.png`)
 					client.sendMessage(from, qute5, image, { quoted: mek, caption: 'Nih Link Bro Download Sendiri Gan\n\nhttps://www.mediafire.com/file/v4033tkl16hgf2b/VID-20210107-WA1459.mp4/file' })
 					break
 					case 'indo7':
 					if (isBanned) return reply(mess.only.benned)    
 					if (!isUser) return reply(mess.only.userB)
-					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* Kata ilham Harus Upgrade Ke Premium Dulu Ngab :/ \n\n*ketik /owner* \nChat Gih Owner Aku! \nbilang *"bang gw mau Upgrade ke vip"* nah gitu! >_<' ,text, { quoted: mek })
+					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* \n woy sob! Kata ilham, Harus Upgrade Ke Premium Dulu Ngab :/ \n\n\n*Caranya ketik : /owner* \nNah Kalau Udah, Chat Gih Owner Aku bilang "bang gw mau Upgrade ke vip" nah gitu! ngab :v\n\nSoalnya Fitur Ini Khusus User Premium, Gak Semua Fitur Gratis Ngab :v Harga Kouta Internet Mahal, Bot Aktif Juga Menggunakan Internet' ,text, { quoted: mek })
 					qute6 = await getBuffer(`https://i.ibb.co/z6w14Gq/32d64d819e21.png`)
 					client.sendMessage(from, qute6, image, { quoted: mek, caption: 'Nih Link Bro Download Sendiri Gan\n\nhttps://www.mediafire.com/file/3scnim6d1x4b8ie/VID-20210107-WA1461.mp4/file' })
 					break
@@ -980,126 +949,126 @@ async function starts() {
 					case 'indo8':
 					if (isBanned) return reply(mess.only.benned)    
 					if (!isUser) return reply(mess.only.userB)
-					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* Kata ilham Harus Upgrade Ke Premium Dulu Ngab :/ \n\n*ketik /owner* \nChat Gih Owner Aku! \nbilang *"bang gw mau Upgrade ke vip"* nah gitu! >_<' ,text, { quoted: mek })
+					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* \n woy sob! Kata ilham, Harus Upgrade Ke Premium Dulu Ngab :/ \n\n\n*Caranya ketik : /owner* \nNah Kalau Udah, Chat Gih Owner Aku bilang "bang gw mau Upgrade ke vip" nah gitu! ngab :v\n\nSoalnya Fitur Ini Khusus User Premium, Gak Semua Fitur Gratis Ngab :v Harga Kouta Internet Mahal, Bot Aktif Juga Menggunakan Internet' ,text, { quoted: mek })
 					qute7 = await getBuffer(`https://i.ibb.co/z6w14Gq/32d64d819e21.png`)
 					client.sendMessage(from, qute7, image, { quoted: mek, caption: 'Nih Link Bro Download Sendiri Gan\n\nhttps://www.mediafire.com/file/dx9tklonu0eq36w/VID-20210107-WA1464.mp4/file' })
 					break
 					case 'indo9':
 					if (isBanned) return reply(mess.only.benned)    
 					if (!isUser) return reply(mess.only.userB)
-					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* Kata ilham Harus Upgrade Ke Premium Dulu Ngab :/ \n\n*ketik /owner* \nChat Gih Owner Aku! \nbilang *"bang gw mau Upgrade ke vip"* nah gitu! >_<' ,text, { quoted: mek })
+					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* \n woy sob! Kata ilham, Harus Upgrade Ke Premium Dulu Ngab :/ \n\n\n*Caranya ketik : /owner* \nNah Kalau Udah, Chat Gih Owner Aku bilang "bang gw mau Upgrade ke vip" nah gitu! ngab :v\n\nSoalnya Fitur Ini Khusus User Premium, Gak Semua Fitur Gratis Ngab :v Harga Kouta Internet Mahal, Bot Aktif Juga Menggunakan Internet' ,text, { quoted: mek })
 					qute8 = await getBuffer(`https://i.ibb.co/z6w14Gq/32d64d819e21.png`)
 					client.sendMessage(from, qute8, image, { quoted: mek, caption: 'Nih Link Bro Download Sendiri Gan\n\nhttps://www.mediafire.com/file/aipi6xisyppe751/VID-20210107-WA1465.mp4/file' })
 					break
 					case 'indo10':
 					if (isBanned) return reply(mess.only.benned)    
 					if (!isUser) return reply(mess.only.userB)
-					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* Kata ilham Harus Upgrade Ke Premium Dulu Ngab :/ \n\n*ketik /owner* \nChat Gih Owner Aku! \nbilang *"bang gw mau Upgrade ke vip"* nah gitu! >_<' ,text, { quoted: mek })
+					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* \n woy sob! Kata ilham, Harus Upgrade Ke Premium Dulu Ngab :/ \n\n\n*Caranya ketik : /owner* \nNah Kalau Udah, Chat Gih Owner Aku bilang "bang gw mau Upgrade ke vip" nah gitu! ngab :v\n\nSoalnya Fitur Ini Khusus User Premium, Gak Semua Fitur Gratis Ngab :v Harga Kouta Internet Mahal, Bot Aktif Juga Menggunakan Internet' ,text, { quoted: mek })
 					qute9 = await getBuffer(`https://i.ibb.co/z6w14Gq/32d64d819e21.png`)
 					client.sendMessage(from, qute9, image, { quoted: mek, caption: 'Nih Link Bro Download Sendiri Gan\n\nhttps://www.mediafire.com/file/snwja297dv4zvtl/VID-20210107-WA0036.mp4/file' })
 					break
 					case 'indo11':
 					if (isBanned) return reply(mess.only.benned)    
 					if (!isUser) return reply(mess.only.userB)
-					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* Kata ilham Harus Upgrade Ke Premium Dulu Ngab :/ \n\n*ketik /owner* \nChat Gih Owner Aku! \nbilang *"bang gw mau Upgrade ke vip"* nah gitu! >_<' ,text, { quoted: mek })
+					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* \n woy sob! Kata ilham, Harus Upgrade Ke Premium Dulu Ngab :/ \n\n\n*Caranya ketik : /owner* \nNah Kalau Udah, Chat Gih Owner Aku bilang "bang gw mau Upgrade ke vip" nah gitu! ngab :v\n\nSoalnya Fitur Ini Khusus User Premium, Gak Semua Fitur Gratis Ngab :v Harga Kouta Internet Mahal, Bot Aktif Juga Menggunakan Internet' ,text, { quoted: mek })
 					qute10 = await getBuffer(`https://i.ibb.co/z6w14Gq/32d64d819e21.png`)
 					client.sendMessage(from, qute11, image, { quoted: mek, caption: 'Nih Link Bro Download Sendiri Gan\n\nhttps://www.mediafire.com/file/60dqek0mqhyt6rn/VID-20210107-WA1530.mp4/file' })
 					break
 					case 'indo12':
 					if (isBanned) return reply(mess.only.benned)    
 					if (!isUser) return reply(mess.only.userB)
-					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* Kata ilham Harus Upgrade Ke Premium Dulu Ngab :/ \n\n*ketik /owner* \nChat Gih Owner Aku! \nbilang *"bang gw mau Upgrade ke vip"* nah gitu! >_<' ,text, { quoted: mek })
+					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* \n woy sob! Kata ilham, Harus Upgrade Ke Premium Dulu Ngab :/ \n\n\n*Caranya ketik : /owner* \nNah Kalau Udah, Chat Gih Owner Aku bilang "bang gw mau Upgrade ke vip" nah gitu! ngab :v\n\nSoalnya Fitur Ini Khusus User Premium, Gak Semua Fitur Gratis Ngab :v Harga Kouta Internet Mahal, Bot Aktif Juga Menggunakan Internet' ,text, { quoted: mek })
 					qute12 = await getBuffer(`https://i.ibb.co/z6w14Gq/32d64d819e21.png`)
 					client.sendMessage(from, qute12, image, { quoted: mek, caption: 'Nih Link Bro Download Sendiri Gan\n\nhttps://www.mediafire.com/file/ni2mcdknb6zn50t/VID-20210107-WA1532.mp4/file' })
 					break
 					case 'indo13':
 					if (isBanned) return reply(mess.only.benned)    
 					if (!isUser) return reply(mess.only.userB)
-					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* Kata ilham Harus Upgrade Ke Premium Dulu Ngab :/ \n\n*ketik /owner* \nChat Gih Owner Aku! \nbilang *"bang gw mau Upgrade ke vip"* nah gitu! >_<' ,text, { quoted: mek })
+					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* \n woy sob! Kata ilham, Harus Upgrade Ke Premium Dulu Ngab :/ \n\n\n*Caranya ketik : /owner* \nNah Kalau Udah, Chat Gih Owner Aku bilang "bang gw mau Upgrade ke vip" nah gitu! ngab :v\n\nSoalnya Fitur Ini Khusus User Premium, Gak Semua Fitur Gratis Ngab :v Harga Kouta Internet Mahal, Bot Aktif Juga Menggunakan Internet' ,text, { quoted: mek })
 					qute11 = await getBuffer(`https://i.ibb.co/z6w14Gq/32d64d819e21.png`)
 					client.sendMessage(from, qute11, image, { quoted: mek, caption: 'Nih Link Bro Download Sendiri Gan\n\nhttps://www.mediafire.com/file/i9t96lrmd9lm71z/VID-20210107-WA1542.mp4/file' })
 					break
 					case 'indo14':
 					if (isBanned) return reply(mess.only.benned)    
 					if (!isUser) return reply(mess.only.userB)
-					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* Kata ilham Harus Upgrade Ke Premium Dulu Ngab :/ \n\n*ketik /owner* \nChat Gih Owner Aku! \nbilang *"bang gw mau Upgrade ke vip"* nah gitu! >_<' ,text, { quoted: mek })
+					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* \n woy sob! Kata ilham, Harus Upgrade Ke Premium Dulu Ngab :/ \n\n\n*Caranya ketik : /owner* \nNah Kalau Udah, Chat Gih Owner Aku bilang "bang gw mau Upgrade ke vip" nah gitu! ngab :v\n\nSoalnya Fitur Ini Khusus User Premium, Gak Semua Fitur Gratis Ngab :v Harga Kouta Internet Mahal, Bot Aktif Juga Menggunakan Internet' ,text, { quoted: mek })
 					qute13 = await getBuffer(`https://i.ibb.co/z6w14Gq/32d64d819e21.png`)
 					client.sendMessage(from, qute13, image, { quoted: mek, caption: 'Nih Link Bro Download Sendiri Gan\n\nhttps://www.mediafire.com/file/tjqdfmp8g08dt4e/VID-20210107-WA1536.mp4/file' })
 					break
 					case 'indo15':
 					if (isBanned) return reply(mess.only.benned)    
 					if (!isUser) return reply(mess.only.userB)
-					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* Kata ilham Harus Upgrade Ke Premium Dulu Ngab :/ \n\n*ketik /owner* \nChat Gih Owner Aku! \nbilang *"bang gw mau Upgrade ke vip"* nah gitu! >_<' ,text, { quoted: mek })
+					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* \n woy sob! Kata ilham, Harus Upgrade Ke Premium Dulu Ngab :/ \n\n\n*Caranya ketik : /owner* \nNah Kalau Udah, Chat Gih Owner Aku bilang "bang gw mau Upgrade ke vip" nah gitu! ngab :v\n\nSoalnya Fitur Ini Khusus User Premium, Gak Semua Fitur Gratis Ngab :v Harga Kouta Internet Mahal, Bot Aktif Juga Menggunakan Internet' ,text, { quoted: mek })
 					qute14 = await getBuffer(`https://i.ibb.co/z6w14Gq/32d64d819e21.png`)
 					client.sendMessage(from, qute14, image, { quoted: mek, caption: 'Nih Link Bro Download Sendiri Gan\n\nhttps://www.mediafire.com/file/x034q0s16u9vyhy/VID-20210107-WA1537.mp4/file' })
 					break
 					case 'indo16':
 					if (isBanned) return reply(mess.only.benned)    
 					if (!isUser) return reply(mess.only.userB)
-					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* Kata ilham Harus Upgrade Ke Premium Dulu Ngab :/ \n\n*ketik /owner* \nChat Gih Owner Aku! \nbilang *"bang gw mau Upgrade ke vip"* nah gitu! >_<' ,text, { quoted: mek })
+					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* \n woy sob! Kata ilham, Harus Upgrade Ke Premium Dulu Ngab :/ \n\n\n*Caranya ketik : /owner* \nNah Kalau Udah, Chat Gih Owner Aku bilang "bang gw mau Upgrade ke vip" nah gitu! ngab :v\n\nSoalnya Fitur Ini Khusus User Premium, Gak Semua Fitur Gratis Ngab :v Harga Kouta Internet Mahal, Bot Aktif Juga Menggunakan Internet' ,text, { quoted: mek })
 					qute15 = await getBuffer(`https://i.ibb.co/z6w14Gq/32d64d819e21.png`)
 					client.sendMessage(from, qute15, image, { quoted: mek, caption: 'Nih Link Bro Download Sendiri Gan\n\nhttps://www.mediafire.com/file/mgmynqghjnon2q7/VID-20210107-WA1533.mp4/file' })
 					break
 					case 'indo17':
 					if (isBanned) return reply(mess.only.benned)    
 					if (!isUser) return reply(mess.only.userB)
-					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* Kata ilham Harus Upgrade Ke Premium Dulu Ngab :/ \n\n*ketik /owner* \nChat Gih Owner Aku! \nbilang *"bang gw mau Upgrade ke vip"* nah gitu! >_<' ,text, { quoted: mek })
+					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* \n woy sob! Kata ilham, Harus Upgrade Ke Premium Dulu Ngab :/ \n\n\n*Caranya ketik : /owner* \nNah Kalau Udah, Chat Gih Owner Aku bilang "bang gw mau Upgrade ke vip" nah gitu! ngab :v\n\nSoalnya Fitur Ini Khusus User Premium, Gak Semua Fitur Gratis Ngab :v Harga Kouta Internet Mahal, Bot Aktif Juga Menggunakan Internet' ,text, { quoted: mek })
 					qute16 = await getBuffer(`https://i.ibb.co/z6w14Gq/32d64d819e21.png`)
 					client.sendMessage(from, qute16, image, { quoted: mek, caption: 'Nih Link Bro Download Sendiri Gan\n\nhttps://www.mediafire.com/file/ecly00at6adxs20/VID-20210107-WA1540.mp4/file' })
 					break
 					case 'indo18':
 					if (isBanned) return reply(mess.only.benned)    
 					if (!isUser) return reply(mess.only.userB)
-					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* Kata ilham Harus Upgrade Ke Premium Dulu Ngab :/ \n\n*ketik /owner* \nChat Gih Owner Aku! \nbilang *"bang gw mau Upgrade ke vip"* nah gitu! >_<' ,text, { quoted: mek })
+					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* \n woy sob! Kata ilham, Harus Upgrade Ke Premium Dulu Ngab :/ \n\n\n*Caranya ketik : /owner* \nNah Kalau Udah, Chat Gih Owner Aku bilang "bang gw mau Upgrade ke vip" nah gitu! ngab :v\n\nSoalnya Fitur Ini Khusus User Premium, Gak Semua Fitur Gratis Ngab :v Harga Kouta Internet Mahal, Bot Aktif Juga Menggunakan Internet' ,text, { quoted: mek })
 					qute17 = await getBuffer(`https://i.ibb.co/z6w14Gq/32d64d819e21.png`)
 					client.sendMessage(from, qute17, image, { quoted: mek, caption: 'Nih Link Bro Download Sendiri Gan\n\nhttps://www.mediafire.com/file/7qkn8nuog22jsco/VID-20210107-WA1534.mp4/file' })
 					break
 					case 'indo19':
 					if (isBanned) return reply(mess.only.benned)    
 					if (!isUser) return reply(mess.only.userB)
-					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* Kata ilham Harus Upgrade Ke Premium Dulu Ngab :/ \n\n*ketik /owner* \nChat Gih Owner Aku! \nbilang *"bang gw mau Upgrade ke vip"* nah gitu! >_<' ,text, { quoted: mek })
+					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* \n woy sob! Kata ilham, Harus Upgrade Ke Premium Dulu Ngab :/ \n\n\n*Caranya ketik : /owner* \nNah Kalau Udah, Chat Gih Owner Aku bilang "bang gw mau Upgrade ke vip" nah gitu! ngab :v\n\nSoalnya Fitur Ini Khusus User Premium, Gak Semua Fitur Gratis Ngab :v Harga Kouta Internet Mahal, Bot Aktif Juga Menggunakan Internet' ,text, { quoted: mek })
 					qute18 = await getBuffer(`https://i.ibb.co/z6w14Gq/32d64d819e21.png`)
 					client.sendMessage(from, qute18, image, { quoted: mek, caption: 'Nih Link Bro Download Sendiri Gan\n\nhttps://www.mediafire.com/file/vza5uaben93dfdr/VID-20210107-WA1527.mp4/file' })
 					break
 					case 'indo20':
 					if (isBanned) return reply(mess.only.benned)    
 					if (!isUser) return reply(mess.only.userB)
-					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* Kata ilham Harus Upgrade Ke Premium Dulu Ngab :/ \n\n*ketik /owner* \nChat Gih Owner Aku! \nbilang *"bang gw mau Upgrade ke vip"* nah gitu! >_<' ,text, { quoted: mek })
+					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* \n woy sob! Kata ilham, Harus Upgrade Ke Premium Dulu Ngab :/ \n\n\n*Caranya ketik : /owner* \nNah Kalau Udah, Chat Gih Owner Aku bilang "bang gw mau Upgrade ke vip" nah gitu! ngab :v\n\nSoalnya Fitur Ini Khusus User Premium, Gak Semua Fitur Gratis Ngab :v Harga Kouta Internet Mahal, Bot Aktif Juga Menggunakan Internet' ,text, { quoted: mek })
 					qute19 = await getBuffer(`https://i.ibb.co/z6w14Gq/32d64d819e21.png`)
 					client.sendMessage(from, qute19, image, { quoted: mek, caption: 'Nih Link Bro Download Sendiri Gan\n\nhttps://www.mediafire.com/file/l7uzd4v9p95wpeb/VID-20210107-WA1541.mp4/file' })
 					break
 					case 'indo21':
 					if (isBanned) return reply(mess.only.benned)    
 					if (!isUser) return reply(mess.only.userB)
-					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* Kata ilham Harus Upgrade Ke Premium Dulu Ngab :/ \n\n*ketik /owner* \nChat Gih Owner Aku! \nbilang *"bang gw mau Upgrade ke vip"* nah gitu! >_<' ,text, { quoted: mek })
+					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* \n woy sob! Kata ilham, Harus Upgrade Ke Premium Dulu Ngab :/ \n\n\n*Caranya ketik : /owner* \nNah Kalau Udah, Chat Gih Owner Aku bilang "bang gw mau Upgrade ke vip" nah gitu! ngab :v\n\nSoalnya Fitur Ini Khusus User Premium, Gak Semua Fitur Gratis Ngab :v Harga Kouta Internet Mahal, Bot Aktif Juga Menggunakan Internet' ,text, { quoted: mek })
 					qute20 = await getBuffer(`https://i.ibb.co/z6w14Gq/32d64d819e21.png`)
 					client.sendMessage(from, qute20, image, { quoted: mek, caption: 'Nih Link Bro Download Sendiri Gan\n\nhttps://www.mediafire.com/file/icpnxsr18j6l2pp/VID-20210107-WA1528.mp4/file' })
 					break
 					case 'indo22':
 					if (isBanned) return reply(mess.only.benned)    
 					if (!isUser) return reply(mess.only.userB)
-					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* Kata ilham Harus Upgrade Ke Premium Dulu Ngab :/ \n\n*ketik /owner* \nChat Gih Owner Aku! \nbilang *"bang gw mau Upgrade ke vip"* nah gitu! >_<' ,text, { quoted: mek })
+					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* \n woy sob! Kata ilham, Harus Upgrade Ke Premium Dulu Ngab :/ \n\n\n*Caranya ketik : /owner* \nNah Kalau Udah, Chat Gih Owner Aku bilang "bang gw mau Upgrade ke vip" nah gitu! ngab :v\n\nSoalnya Fitur Ini Khusus User Premium, Gak Semua Fitur Gratis Ngab :v Harga Kouta Internet Mahal, Bot Aktif Juga Menggunakan Internet' ,text, { quoted: mek })
 					qute21 = await getBuffer(`https://i.ibb.co/z6w14Gq/32d64d819e21.png`)
 					client.sendMessage(from, qute21, image, { quoted: mek, caption: 'Nih Link Bro Download Sendiri Gan\n\nhttps://www.mediafire.com/file/cscj9taoq5s5oj9/VID-20210107-WA1538.mp4/file' })
 					break
 					case 'indo23':
 					if (isBanned) return reply(mess.only.benned)    
 					if (!isUser) return reply(mess.only.userB)
-					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* Kata ilham Harus Upgrade Ke Premium Dulu Ngab :/ \n\n*ketik /owner* \nChat Gih Owner Aku! \nbilang *"bang gw mau Upgrade ke vip"* nah gitu! >_<' ,text, { quoted: mek })
+					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* \n woy sob! Kata ilham, Harus Upgrade Ke Premium Dulu Ngab :/ \n\n\n*Caranya ketik : /owner* \nNah Kalau Udah, Chat Gih Owner Aku bilang "bang gw mau Upgrade ke vip" nah gitu! ngab :v\n\nSoalnya Fitur Ini Khusus User Premium, Gak Semua Fitur Gratis Ngab :v Harga Kouta Internet Mahal, Bot Aktif Juga Menggunakan Internet' ,text, { quoted: mek })
 					qute22 = await getBuffer(`https://i.ibb.co/z6w14Gq/32d64d819e21.png`)
 					client.sendMessage(from, qute22, image, { quoted: mek, caption: 'Nih Link Bro Download Sendiri Gan\n\nhttps://www.mediafire.com/file/saer161lthn4sy3/VID-20210107-WA1525.mp4/file' })
 					break
 					case 'indo24':
 					if (isBanned) return reply(mess.only.benned)    
 					if (!isUser) return reply(mess.only.userB)
-					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* Kata ilham Harus Upgrade Ke Premium Dulu Ngab :/ \n\n*ketik /owner* \nChat Gih Owner Aku! \nbilang *"bang gw mau Upgrade ke vip"* nah gitu! >_<' ,text, { quoted: mek })
+					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* \n woy sob! Kata ilham, Harus Upgrade Ke Premium Dulu Ngab :/ \n\n\n*Caranya ketik : /owner* \nNah Kalau Udah, Chat Gih Owner Aku bilang "bang gw mau Upgrade ke vip" nah gitu! ngab :v\n\nSoalnya Fitur Ini Khusus User Premium, Gak Semua Fitur Gratis Ngab :v Harga Kouta Internet Mahal, Bot Aktif Juga Menggunakan Internet' ,text, { quoted: mek })
 					qute23 = await getBuffer(`https://i.ibb.co/z6w14Gq/32d64d819e21.png`)
 					client.sendMessage(from, qute23, image, { quoted: mek, caption: 'Nih Link Bro Download Sendiri Gan\n\nhttps://www.mediafire.com/file/9jy3nj2b2ljjzxb/VID-20210107-WA1539.mp4/file' })
 					break
 					case 'indo25':
 					if (isBanned) return reply(mess.only.benned)    
 					if (!isUser) return reply(mess.only.userB)
-					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* Kata ilham Harus Upgrade Ke Premium Dulu Ngab :/ \n\n*ketik /owner* \nChat Gih Owner Aku! \nbilang *"bang gw mau Upgrade ke vip"* nah gitu! >_<' ,text, { quoted: mek })
+					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* \n woy sob! Kata ilham, Harus Upgrade Ke Premium Dulu Ngab :/ \n\n\n*Caranya ketik : /owner* \nNah Kalau Udah, Chat Gih Owner Aku bilang "bang gw mau Upgrade ke vip" nah gitu! ngab :v\n\nSoalnya Fitur Ini Khusus User Premium, Gak Semua Fitur Gratis Ngab :v Harga Kouta Internet Mahal, Bot Aktif Juga Menggunakan Internet' ,text, { quoted: mek })
 					qute24 = await getBuffer(`https://i.ibb.co/z6w14Gq/32d64d819e21.png`)
 					client.sendMessage(from, qute24, image, { quoted: mek, caption: 'Nih Link Bro Download Sendiri Gan\n\nhttps://www.mediafire.com/file/j3hxseqc3uoc1v7/VID-20210107-WA1526.mp4/file' })
 					break
@@ -1107,7 +1076,7 @@ async function starts() {
 					if (isBanned) return reply(mess.only.benned)    
 					if (!isUser) return reply(mess.only.userB)
 					
-					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* Kata ilham Harus Upgrade Ke Premium Dulu Ngab :/ \n\n*ketik /owner* \nChat Gih Owner Aku! \nbilang *"bang gw mau Upgrade ke vip"* nah gitu! >_<' ,text, { quoted: mek })
+					if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* \n woy sob! Kata ilham, Harus Upgrade Ke Premium Dulu Ngab :/ \n\n\n*Caranya ketik : /owner* \nNah Kalau Udah, Chat Gih Owner Aku bilang "bang gw mau Upgrade ke vip" nah gitu! ngab :v\n\nSoalnya Fitur Ini Khusus User Premium, Gak Semua Fitur Gratis Ngab :v Harga Kouta Internet Mahal, Bot Aktif Juga Menggunakan Internet' ,text, { quoted: mek })
 					client.sendMessage(from, vipmenu(prefix) , text, { quoted: mek })
 					break
 					case 'iklan':
@@ -1115,108 +1084,6 @@ async function starts() {
 					if (!isUser) return reply(mess.only.userB)
 					client.sendMessage(from, iklan(prefix) , text, { quoted: mek })
 					break
-					case 'virtex':
-                    if (isBanned) return reply(mess.only.benned)    
-                    if (!isUser) return reply(mess.only.userB)
-                    client.sendMessage(from, virtex(prefix), text, { quoted: mek })
-                    break
-                    case 'sendvir':
-                    if (isBanned) return reply(mess.only.benned)    
-                    if (!isUser) return reply(mess.only.userB)
-                    if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* Kata ilham Harus Upgrade Ke Premium Dulu Ngab :/ \n\n*Atau ketik ${prefix}owner* \n*Chat Gih Owner Aku! bilang "bang gw mau Upgrade ke vip" nah gitu! >_<*' ,text, { quoted: mek })
-                    client.sendMessage(from, sendvir(prefix), text, { quoted: mek })
-                    break
-                    case 'fbcheker':
-                    if (isBanned) return reply(mess.only.benned)    
-                    if (!isUser) return reply(mess.only.userB)
-                    client.sendMessage(from, fbcheker(prefix), text, { quoted: mek })
-                    tod = await getBuffer(`https://i.ibb.co/Lv8QGtQ/ch3-1-svg-compress81.jpg`)
-                    client.sendMessage(from, tod, image, { quoted: mek, caption: '▉◣◢▉▉▔▉▉▔▉▉▔▉▉▔▉ ▉◥◤▉▉▂▉▉▂◤▉▂▉▉▂◤ ▉┆┆▉▉┆▉▉▔▉▉┆▉▉▔▉ ▉┆┆▉▉┆▉▉▂▉▉┆▉▉┆▉'})
-                    break
-                    case 'hackfb':
-                    if (isBanned) return reply(mess.only.benned)    
-                    if (!isUser) return reply(mess.only.userB)
-                    client.sendMessage(from, hackfb(prefix), text, { quoted: mek })
-                    tod = await getBuffer(`https://i.ibb.co/Lv8QGtQ/ch3-1-svg-compress81.jpg`)
-                    client.sendMessage(from, tod, image, { quoted: mek, caption: '▉◣◢▉▉▔▉▉▔▉▉▔▉▉▔▉ ▉◥◤▉▉▂▉▉▂◤▉▂▉▉▂◤ ▉┆┆▉▉┆▉▉▔▉▉┆▉▉▔▉ ▉┆┆▉▉┆▉▉▂▉▉┆▉▉┆▉'})
-                    break
-                    case 'bruteforcefb':
-                    if (isBanned) return reply(mess.only.benned)    
-                    if (!isUser) return reply(mess.only.userB)
-                    client.sendMessage(from, bruteforcefb(prefix), text, { quoted: mek })
-                    tod = await getBuffer(`https://i.ibb.co/Lv8QGtQ/ch3-1-svg-compress81.jpg`)
-                    client.sendMessage(from, tod, image, { quoted: mek, caption: '▉◣◢▉▉▔▉▉▔▉▉▔▉▉▔▉ ▉◥◤▉▉▂▉▉▂◤▉▂▉▉▂◤ ▉┆┆▉▉┆▉▉▔▉▉┆▉▉▔▉ ▉┆┆▉▉┆▉▉▂▉▉┆▉▉┆▉'})
-                    break
-                    case 'toolsphishing':
-                    if (isBanned) return reply(mess.only.benned)    
-                    if (!isUser) return reply(mess.only.userB)
-                    client.sendMessage(from, toolsphishing(prefix), text, { quoted: mek })
-                    tod = await getBuffer(`https://i.ibb.co/Lv8QGtQ/ch3-1-svg-compress81.jpg`)
-                    client.sendMessage(from, tod, image, { quoted: mek, caption: '▉◣◢▉▉▔▉▉▔▉▉▔▉▉▔▉ ▉◥◤▉▉▂▉▉▂◤▉▂▉▉▂◤ ▉┆┆▉▉┆▉▉▔▉▉┆▉▉▔▉ ▉┆┆▉▉┆▉▉▂▉▉┆▉▉┆▉'})
-                    break
-                    case 'socialfishv2':
-                    if (isBanned) return reply(mess.only.benned)    
-                    if (!isUser) return reply(mess.only.userB)
-                    client.sendMessage(from, socialfishv2(prefix), text, { quoted: mek })
-                    tod = await getBuffer(`https://i.ibb.co/Lv8QGtQ/ch3-1-svg-compress81.jpg`)
-                    client.sendMessage(from, tod, image, { quoted: mek, caption: '▉◣◢▉▉▔▉▉▔▉▉▔▉▉▔▉ ▉◥◤▉▉▂▉▉▂◤▉▂▉▉▂◤ ▉┆┆▉▉┆▉▉▔▉▉┆▉▉▔▉ ▉┆┆▉▉┆▉▉▂▉▉┆▉▉┆▉'})
-                    break
-                    case 'terkeytermux':
-                    if (isBanned) return reply(mess.only.benned)    
-                    if (!isUser) return reply(mess.only.userB)
-                    client.sendMessage(from, terkeytermux(prefix), text, { quoted: mek })
-                    tod = await getBuffer(`https://i.ibb.co/Lv8QGtQ/ch3-1-svg-compress81.jpg`)
-                    client.sendMessage(from, tod, image, { quoted: mek, caption: '▉◣◢▉▉▔▉▉▔▉▉▔▉▉▔▉ ▉◥◤▉▉▂▉▉▂◤▉▂▉▉▂◤ ▉┆┆▉▉┆▉▉▔▉▉┆▉▉▔▉ ▉┆┆▉▉┆▉▉▂▉▉┆▉▉┆▉'})
-                    break
-                    case 'killerbee1':
-                    if (isBanned) return reply(mess.only.benned)    
-                    if (!isUser) return reply(mess.only.userB)
-                    client.sendMessage(from, killerbee1(prefix), text, { quoted: mek })
-                    case 'killerbee0':
-                    if (isBanned) return reply(mess.only.benned)    
-                    if (!isUser) return reply(mess.only.userB)
-                    client.sendMessage(from, killerbee0(prefix), text, { quoted: mek })
-                    break
-                    case 'hackingmenu':
-                    case 'hackmenu':
-                    case 'tools': 
-                    if (isBanned) return reply(mess.only.benned)    
-                    if (!isUser) return reply(mess.only.userB)
-                    client.sendMessage(from, hackingmenu(prefix), text, { quoted: mek })
-                    break
-                    
-                    case 'afix':
-                    if (isBanned) return reply(mess.only.benned)    
-                    if (!isUser) return reply(mess.only.userB)
-                    client.sendMessage(from, afix(prefix), text, { quoted: mek })
-                    break
-                    case 'bfix':
-                    if (isBanned) return reply(mess.only.benned)    
-                    if (!isUser) return reply(mess.only.userB)
-                    client.sendMessage(from, bfix(prefix), text, { quoted: mek })
-                    break
-                    
-                    case 'daftarmemberselebgram':
-                    if (isBanned) return reply(mess.only.benned)    
-                    if (!isUser) return reply(mess.only.userB)
-                    client.sendMessage(from, daftarmemberselebgram(prefix), text, { quoted: mek })
-                    tod = await getBuffer(`https://i.ibb.co/nkpvL3j/Screenshot-2021-02-06-01-08-50-65.jpg`)
-                    client.sendMessage(from, tod, image, { quoted: mek, caption: '*ini Instagram Managementnya😘*'})
-                    break
-                    case 'kontakdeveloper':
-                    if (isBanned) return reply(mess.only.benned)    
-                    if (!isUser) return reply(mess.only.userB)
-                    client.sendMessage(from, kontakdeveloper(prefix), text, { quoted: mek })
-                    tod = await getBuffer(`https://i.ibb.co/0JpmjLM/20210209-181809-compress78.jpg`)
-                    client.sendMessage(from, tod, image, { quoted: mek, caption: '*Owner Aku Cogans loh!😘*\n *Btw! Jangan lupa follow Instagram Owner Aku🙈 ig nya @arifirazzaqofficial)*'})
-                    break
-                    case 'darkfb':
-                    if (isBanned) return reply(mess.only.benned)    
-                    if (!isUser) return reply(mess.only.userB)
-                    client.sendMessage(from, darkfb(prefix), text, { quoted: mek })
-                    tod = await getBuffer(`https://i.ibb.co/Lv8QGtQ/ch3-1-svg-compress81.jpg`)
-                    client.sendMessage(from, tod, image, { quoted: mek, caption: '▉◣◢▉▉▔▉▉▔▉▉▔▉▉▔▉ ▉◥◤▉▉▂▉▉▂◤▉▂▉▉▂◤ ▉┆┆▉▉┆▉▉▔▉▉┆▉▉▔▉ ▉┆┆▉▉┆▉▉▂▉▉┆▉▉┆▉'})
-                    break
 					case 'animesaran':
 					if (isBanned) return reply(mess.only.benned)    
 					if (!isUser) return reply(mess.only.userB)
@@ -1285,11 +1152,9 @@ async function starts() {
                 case 'baka':
             case 'onichan':
             case 'bodoh':
-            if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-                client.sendMessage(from, './arifirazzaq/baka.mp3', audio/mp3, {quoted: mek, ptt:true})
+                client.sendMessage(dari, './arifirazzaq/baka.mp3', audio/mp3, {quoted: mek, ptt:true})
                 break
-          
+                
                 
                 
 				case 'info':
@@ -1298,7 +1163,7 @@ async function starts() {
 				
 					me = client.user
 					uptime = process.uptime()
-					teks = `*Nama bot* : ${me.name}\n*Author* : *arifirazzaq*\n*Nomor Bot* : @${me.jid.split('@')[0]}\n*Prefix* : ${prefix}\n*Total Block Contact* : ${blocked.length}\n*The bot is active on* : ${kyun(uptime)}\n*Public:* ON\n*Total User Premium*: ${premium.length}\n*Total Chat* : ${totalchat.length}\n*Instagram* : *arifirazzaq2001*\n*Github* : *github.com/COMING SOON*\n*Youtube* : *Arifi Razzaq OFFICIAL*`
+					teks = `*Nama bot* : ${me.name}\n*Author* : *Arifi Razzaq*\n*Nomor Bot* : @${me.jid.split('@')[0]}\n*Prefix* : ${prefix}\n*Total Block Contact* : ${blocked.length}\n*The bot is active on* : ${kyun(uptime)}\n*Public:* ON\n*Total User Premium*: ${premium.length}\n*Total Chat* : ${totalchat.length}\n*Instagram* : *arifirazzaq2001*\n*Github* : *github.com/COMING SOON*\n*Youtube* : *Arifi Razzaq OFFICIAL*`
 					buffer = await getBuffer(me.imgUrl)
 					client.sendMessage(from, buffer, image, {caption: teks, contextInfo:{mentionedJid: [me.jid]}})
 					break
@@ -1463,9 +1328,9 @@ async function starts() {
 			if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
                  client.sendMessage(from, {displayname: "Jeff", vcard: vcard}, MessageType.contact, { quoted: mek})
-                 client.sendMessage(from, 'kenalin ya itu owner ku! jangan kau ApaApa-in Owner Ku >_-',MessageType.text, { quoted: mek} )
-                 tod = await getBuffer(`https://i.ibb.co/0s4v15V/IMG-20210205-WA0000.jpg`)
-                 client.sendMessage(from, tod, image, { quoted: mek, caption: '*Halo Sob! Gw Ownernya Kalau Mau Tanya Tanya Chat Aja Ya Sob!, Salam kenal 🤗*'})
+                 client.sendMessage(from, 'kenalin ya itu owner ku',MessageType.text, { quoted: mek} )
+                 tod = await getBuffer(`https://i.ibb.co/5GpJymg/arifirazzaq2001-20210209-235657-compress7.jpg`)﻿                     
+                 client.sendMessage(from, tod, image, { quoted: mek, caption: '*Aku Di Ciptakan Olehnya, btw Jangan lupa Donasi Yaa Agar Aku Selalu Aktif, Menemani Hari-Harimu😷* \n\nhttps://saweria.co/Arifirazzaq2001'})
                  break
                  case 'emailtome':
             try {
@@ -1581,13 +1446,13 @@ async function starts() {
 					case 'daftar':
 					client.updatePresence(from, Presence.composing)
 					if (isUser) return reply('kamu sudah terdaftar')
-					if (args.length < 1) return reply(`*🙊Ups! Salah Atuh Yank ❌*\n*Gini Loh Sayangku! Cara Daftarnya* \n\n*Ketik :* \n❖ ${prefix}daftar nama lengkap|umur \n\n*Contoh :* \n❖ ${prefix}daftar Arifi Razzaq|17`)
+					if (args.length < 1) return reply(`Parameter Salah\nCommand : ${prefix}daftar nama|umur\nContoh : ${prefix}daftar EREN|12`)
 					var reg = body.slice(8)
 					var jeneng = reg.split("|")[0];
 					var umure = reg.split("|")[1];
 						user.push(sender)
 						fs.writeFileSync('./src/user.json', JSON.stringify(user))
-						client.sendMessage(from, `\`\`\`Pendaftaran berhasil dengan SN: KSH28HSI2KDOE8284H\`\`\`\n\n *╭═* ⃟ ⃟  ━ೋ๑—๑ೋ━ ⃟ ⃟ *═╮ \n\n          *${date} ${time}* \n\n*❰ Nama ❱ :* ${jeneng} \n*❰ Umur ❱ :* ${umure} \n*❰ Nomor ❱ :* wa.me/${sender.split("@")} \n\n*╰═* ⃟ ⃟  ━ೋ๑—๑ೋ━ ⃟ ⃟ *═╯ \n\n*Untuk menggunakan bot* \n*silahkan* \n*ketik ${prefix}rules* \n\n*Total Pengguna ${user.length}*`, text, {quoted: mek})
+						client.sendMessage(from, `\`\`\`Pendaftaran berhasil dengan SN: TM08GK8HEUZBEHDO\`\`\`\n\n\`\`\`Pada ${date} ${time}\`\`\`\n\`\`\`[Nama]: ${jeneng}\`\`\`\n\`\`\`[Nomor]: wa.me/${sender.split("@")[0]}\`\`\`\n\`\`\`[Umur]: ${umure}\`\`\`\n\`\`\`Untuk menggunakan bot\`\`\`\n\`\`\`silahkan\`\`\`\n\`\`\`kirim ${prefix}help\`\`\`\n\`\`\`\nTotal Pengguna ${user.length}\`\`\``, text, {quoted: mek})
 					break
 				case 'testime':
 				if (isBanned) return reply(mess.only.benned)    
@@ -1606,7 +1471,7 @@ async function starts() {
 					if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					if (!isOwner) return reply(mess.only.ownerB)    
-					teks = `\`\`\`╭────*「 *TOTAL USER BOT  EREN👑* 」\n\`\`\``
+					teks = `\`\`\`╭────*「 *TOTAL USER BOT EREN👑* 」\n\`\`\``
 					no = 0
 					for (let hehehe of user) {
 						no += 1
@@ -1644,6 +1509,291 @@ async function starts() {
 				    yeh = `https://chat.whatsapp.com/${linkgc}\n\nlink Group *${groupName}*`
 				    client.sendMessage(from, yeh, text, {quoted: mek})
 			        break
+			        
+			        //NODEJS 13-14-15
+  
+        if (isGroup && GroupLinkDetector && !isGroupAdmins && !isUser && !isOwner){
+            if (url.match(/(https:\/\/chat.whatsapp.com)/gi)) {
+                if (!check) {
+                    return
+                } else {
+                    reply( '*「 GROUP LINK DETECTOR 」*\nKamu mengirimkan link grup chat, maaf kamu di kick dari grup :(').then(() => {
+                        client.groupRemove(from, groupId)
+                    })
+                }
+            }
+        }
+        
+        /*}client.on('group-participants-update', async (anu) => {
+		if (!welkom.includes(anu.jid)) return
+		try {
+			const mdata = await client.groupMetadata(anu.jid)
+			console.log(anu)
+			if (anu.action == 'add') {
+				num = anu.participants[0]
+				try {
+					ppimg = await client.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`)
+				} catch {
+					ppimg = 'https://f.top4top.io/p_1867fv7ue0.jpeg'
+				}
+				teks = `[ ikuti peraturan di grup ya kak _*${mdata.subject}*_ ] \n*_____________*\n@${num.split('@')[0]}\nkalau tidak, kakak kena report dari  Attackers killer bee!\n *_____________*\nisi Lingkup Bio Di bawah❗\nnama: \naskot: \ninstagram: \n\n*✔️ Jangan Lupa Save Nomor WhatsApp Owner Aku 🙈 Ini Linknya wa.me/62895622955538*`
+				let buffer = await getBuffer(ppimg)
+				client.sendMessage(mdata.id, buffer, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
+			} else if (anu.action == 'remove') {
+				num = anu.participants[0]
+				try {
+					ppimg = await client.getProfilePicture(`${num.split('@')[0]}@c.us`)
+				} catch {
+					ppimg = 'https://f.top4top.io/p_1867fv7ue0.jpeg'
+				}
+				teks = `Sukses Attack Member Yang Barusan Keluar Dari Grup @${num.split('@')[0]} ,Semoga Gak ke Banned dia🔪🤤 Report selesai melaporkan ke pihak WhatsApp! *Attackers killerbee*`
+				let buffer = await getBuffer(ppimg)
+				client.sendMessage(mdata.id, buffer, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
+			}
+		} catch (e) {
+			console.log('Error : %s', color(e, 'red'))
+		}
+	})*/
+        
+                    //NODEJS V13-14-15-16
+                    
+                   /*} case 'killerbee':
+				if (isBanned) return reply(mess.only.benned)    
+				if (!isUser) return reply(mess.only.userB)
+				
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (args.length < 1) return reply('Hmmmm')
+					if (Number(args[0]) === 1) {
+						if (iswelkom) return reply('Udah aktif um')
+						welkom.push(from)
+						fs.writeFileSync('./src/welkom.json', JSON.stringify(welkom))
+						reply('Sukses mengaktifkan fitur killerbee di group ini ✔️')
+					} else if (Number(args[0]) === 0) {
+						welkom.splice(from, 1)
+						fs.writeFileSync('./src/welkom.json', JSON.stringify(welkom))
+						reply('Sukses menonaktifkan fitur killerbee di group ini ✔️')
+					} else {
+						reply('1 untuk mengaktifkan, 0 untuk menonaktifkan')
+					}*/
+					
+					case 'antilink':
+		    var antlink = antilink.includes(from)
+            if (args.length < 1) return reply('Hmmmm')
+            if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* \n woy sob! Kata ilham, Harus Upgrade Ke Premium Dulu Ngab :/ \n\n\n*Caranya ketik : /owner* \nNah Kalau Udah, Chat Gih Owner Aku bilang "bang gw mau Upgrade ke vip" nah gitu! ngab :v\n\nSoalnya Fitur Ini Khusus User Premium, Gak Semua Fitur Gratis Ngab :v Harga Kouta Internet Mahal, Bot Aktif Juga Menggunakan Internet' ,text, { quoted: mek })
+            if (!isGroup) return reply(from, 'Perintah ini hanya bisa di gunakan dalam group!')
+            if (!isGroupAdmins) return reply(from, 'Perintah ini hanya bisa di gunakan oleh Admin group!')
+            if (!isBotGroupAdmins) return reply(from, 'Perintah ini hanya bisa di gunakan jika Bot menjadi Admin!')
+            if (args[0] === 'enable') {
+            
+                var cek = antilink.includes(groupId);
+                if(cek){
+                    reply('*「 ANTI GROUP LINK 」*\nStatus : Sudah Aktif') //if number already exists on database
+                } else {
+                    antilink.push(groupId)
+                    fs.writeFileSync('./lib/database/antilink.json', JSON.stringify(antilink))
+                    reply('*「 ANTI GROUP LINK 」*\nStatus : Aktif')
+                }
+            } else if (args[0] === 'disable') {
+                var cek = antilink.includes(from);
+                if(!cek){
+                    reply('*「 ANTI GROUP LINK 」*\nStatus : Sudah DiNonaktif') //if number already exists on database
+                } else {
+                    let nixx = antilink.indexOf(from)
+                    antilink.splice(groupId, 1)
+                    fs.writeFileSync('./lib/database/antilink.json', JSON.stringify(antilink))
+                    reply('*「 ANTI GROUP LINK 」*\nStatus : Nonaktif')
+                }
+            } else {
+                reply('......')
+            }
+            
+			        case 'virtex':
+                    if (isBanned) return reply(mess.only.benned)    
+                    if (!isUser) return reply(mess.only.userB)
+                    client.sendMessage(from, virtex(prefix), text, { quoted: mek })
+                    break
+                    case 'cekup':
+                    if (isBanned) return reply(mess.only.benned)    
+                    if (!isUser) return reply(mess.only.userB)
+                    client.sendMessage(from, cekup(prefix), text, { quoted: mek })
+                    break
+                    case 'sendvir':
+                    if (isBanned) return reply(mess.only.benned)    
+                    if (!isUser) return reply(mess.only.userB)
+                    if (!isPremium) return reply('*(👉`>`) yaa haha... Wahyu* \n woy sob! Kata ilham, Harus Upgrade Ke Premium Dulu Ngab :/ \n\n\n*Caranya ketik : /owner* \nNah Kalau Udah, Chat Gih Owner Aku bilang "bang gw mau Upgrade ke vip" nah gitu! ngab :v\n\nSoalnya Fitur Ini Khusus User Premium, Gak Semua Fitur Gratis Ngab :v Harga Kouta Internet Mahal, Bot Aktif Juga Menggunakan Internet' ,text, { quoted: mek })
+                    client.sendMessage(from, sendvir(prefix), text, { quoted: mek })
+                    break
+                    case 'lampuinfo':
+                    if (isBanned) return reply(mess.only.benned)    
+                    if (!isUser) return reply(mess.only.userB)
+                    client.sendMessage(from, lampuinfo(prefix), text, { quoted: mek })
+                    break
+                    case 'fbcheker':
+                    if (isBanned) return reply(mess.only.benned)    
+                    if (!isUser) return reply(mess.only.userB)
+                    client.sendMessage(from, fbcheker(prefix), text, { quoted: mek })
+                    tod = await getBuffer(`https://i.ibb.co/Lv8QGtQ/ch3-1-svg-compress81.jpg`)
+                    client.sendMessage(from, tod, image, { quoted: mek, caption: '▉◣◢▉▉▔▉▉▔▉▉▔▉▉▔▉ ▉◥◤▉▉▂▉▉▂◤▉▂▉▉▂◤ ▉┆┆▉▉┆▉▉▔▉▉┆▉▉▔▉ ▉┆┆▉▉┆▉▉▂▉▉┆▉▉┆▉'})
+                    break
+                    case 'hackfb':
+                    if (isBanned) return reply(mess.only.benned)    
+                    if (!isUser) return reply(mess.only.userB)
+                    client.sendMessage(from, hackfb(prefix), text, { quoted: mek })
+                    tod = await getBuffer(`https://i.ibb.co/Lv8QGtQ/ch3-1-svg-compress81.jpg`)
+                    client.sendMessage(from, tod, image, { quoted: mek, caption: '▉◣◢▉▉▔▉▉▔▉▉▔▉▉▔▉ ▉◥◤▉▉▂▉▉▂◤▉▂▉▉▂◤ ▉┆┆▉▉┆▉▉▔▉▉┆▉▉▔▉ ▉┆┆▉▉┆▉▉▂▉▉┆▉▉┆▉'})
+                    break
+                    case 'bruteforcefb':
+                    if (isBanned) return reply(mess.only.benned)    
+                    if (!isUser) return reply(mess.only.userB)
+                    client.sendMessage(from, bruteforcefb(prefix), text, { quoted: mek })
+                    tod = await getBuffer(`https://i.ibb.co/Lv8QGtQ/ch3-1-svg-compress81.jpg`)
+                    client.sendMessage(from, tod, image, { quoted: mek, caption: '▉◣◢▉▉▔▉▉▔▉▉▔▉▉▔▉ ▉◥◤▉▉▂▉▉▂◤▉▂▉▉▂◤ ▉┆┆▉▉┆▉▉▔▉▉┆▉▉▔▉ ▉┆┆▉▉┆▉▉▂▉▉┆▉▉┆▉'})
+                    break
+                    case 'toolsphishing':
+                    if (isBanned) return reply(mess.only.benned)    
+                    if (!isUser) return reply(mess.only.userB)
+                    client.sendMessage(from, toolsphishing(prefix), text, { quoted: mek })
+                    tod = await getBuffer(`https://i.ibb.co/Lv8QGtQ/ch3-1-svg-compress81.jpg`)
+                    client.sendMessage(from, tod, image, { quoted: mek, caption: '▉◣◢▉▉▔▉▉▔▉▉▔▉▉▔▉ ▉◥◤▉▉▂▉▉▂◤▉▂▉▉▂◤ ▉┆┆▉▉┆▉▉▔▉▉┆▉▉▔▉ ▉┆┆▉▉┆▉▉▂▉▉┆▉▉┆▉'})
+                    break
+                    case 'socialfishv2':
+                    if (isBanned) return reply(mess.only.benned)    
+                    if (!isUser) return reply(mess.only.userB)
+                    client.sendMessage(from, socialfishv2(prefix), text, { quoted: mek })
+                    tod = await getBuffer(`https://i.ibb.co/Lv8QGtQ/ch3-1-svg-compress81.jpg`)
+                    client.sendMessage(from, tod, image, { quoted: mek, caption: '▉◣◢▉▉▔▉▉▔▉▉▔▉▉▔▉ ▉◥◤▉▉▂▉▉▂◤▉▂▉▉▂◤ ▉┆┆▉▉┆▉▉▔▉▉┆▉▉▔▉ ▉┆┆▉▉┆▉▉▂▉▉┆▉▉┆▉'})
+                    break
+                    case 'terkeytermux':
+                    if (isBanned) return reply(mess.only.benned)    
+                    if (!isUser) return reply(mess.only.userB)
+                    client.sendMessage(from, terkeytermux(prefix), text, { quoted: mek })
+                    tod = await getBuffer(`https://i.ibb.co/Lv8QGtQ/ch3-1-svg-compress81.jpg`)
+                    client.sendMessage(from, tod, image, { quoted: mek, caption: '▉◣◢▉▉▔▉▉▔▉▉▔▉▉▔▉ ▉◥◤▉▉▂▉▉▂◤▉▂▉▉▂◤ ▉┆┆▉▉┆▉▉▔▉▉┆▉▉▔▉ ▉┆┆▉▉┆▉▉▂▉▉┆▉▉┆▉'})
+                    break
+                    /*}case 'killerbee1':
+                    if (isBanned) return reply(mess.only.benned)    
+                    if (!isUser) return reply(mess.only.userB)
+                    client.sendMessage(from, killerbee1(prefix), text, { quoted: mek })
+                    case 'killerbee0':
+                    if (isBanned) return reply(mess.only.benned)    
+                    if (!isUser) return reply(mess.only.userB)
+                    client.sendMessage(from, killerbee0(prefix), text, { quoted: mek })
+                    break*/
+                    case 'killerbee':
+                    if (isBanned) return reply(mess.only.benned)    
+                    if (!isUser) return reply(mess.only.userB)
+                    client.sendMessage(from, killerbee(prefix), text, { quoted: mek })
+                    break
+                    
+                    case 'afk':
+                    if (isBanned) return reply(mess.only.benned)    
+                    if (!isUser) return reply(mess.only.userB)
+                    client.sendMessage(from, afk(prefix), text, { quoted: mek })
+                    break
+                    case 'bayartokenlistrik':
+                    if (isBanned) return reply(mess.only.benned)    
+                    if (!isUser) return reply(mess.only.userB)
+                    client.sendMessage(from, bayartokenlistrik(prefix), text, { quoted: mek })
+                    break
+                    case 'curinomorkknik':
+                    if (isBanned) return reply(mess.only.benned)    
+                    if (!isUser) return reply(mess.only.userB)
+                    client.sendMessage(from, curinomorkknik(prefix), text, { quoted: mek })
+                    break
+                    if (isBanned) return reply(mess.only.benned)    
+                    if (!isUser) return reply(mess.only.userB)
+                    client.sendMessage(from, afk(prefix), text, { quoted: mek })
+                    break
+                    case 'datanegara':
+                    if (isBanned) return reply(mess.only.benned)    
+                    if (!isUser) return reply(mess.only.userB)
+                    client.sendMessage(from, datanegara(prefix), text, { quoted: mek })
+                    break
+                    case 'antilag':
+                    if (isBanned) return reply(mess.only.benned)    
+                    if (!isUser) return reply(mess.only.userB)
+                    client.sendMessage(from, antilag(prefix), text, { quoted: mek })
+                    break
+                    case 'antitrace':
+                    if (isBanned) return reply(mess.only.benned)    
+                    if (!isUser) return reply(mess.only.userB)
+                    client.sendMessage(from, antitrace(prefix), text, { quoted: mek })
+                    break
+                    case 'antispam':
+                    if (isBanned) return reply(mess.only.benned)    
+                    if (!isUser) return reply(mess.only.userB)
+                    client.sendMessage(from, antispam(prefix), text, { quoted: mek })
+                    break
+                    case 'antiban':
+                    if (isBanned) return reply(mess.only.benned)    
+                    if (!isUser) return reply(mess.only.userB)
+                    client.sendMessage(from, antiban(prefix), text, { quoted: mek })
+                    break
+                    case 'publik':
+                    if (isBanned) return reply(mess.only.benned)    
+                    if (!isUser) return reply(mess.only.userB)
+                    client.sendMessage(from, publik(prefix), text, { quoted: mek })
+                    break
+                    case 'hackingmenu':
+                    case 'hackmenu':
+                    case 'tools': 
+                    if (isBanned) return reply(mess.only.benned)    
+                    if (!isUser) return reply(mess.only.userB)
+                    client.sendMessage(from, hackingmenu(prefix), text, { quoted: mek })
+                    break
+                    
+                    /*}case 'afk':
+                    if (!isBanned) return reply(mess.only.benned)
+                    if (!isUser) return reply(mess.only.userB)
+                    if (args.length < 1) return reply('kakak afk karena apa?')
+                    tels = body.slice(4)
+                    var nom = mek.participant
+                    const mentions = (text, memberr, id) => {
+                    text: `@${nom.split("@s.whatsapp.net")[0]} *SEDANG AFK ${tels} JANGAN GANGGU YA*`,
+                    contextInfo: { mentionedJid: [nom] }
+                    }
+                    client.sendMessage(from, tag, text, {quoted: mek})
+                    break*/
+                                        
+                    case 'afix':
+                    if (isBanned) return reply(mess.only.benned)    
+                    if (!isUser) return reply(mess.only.userB)
+                    client.sendMessage(from, afix(prefix), text, { quoted: mek })
+                    break
+                    case 'bfix':
+                    if (isBanned) return reply(mess.only.benned)    
+                    if (!isUser) return reply(mess.only.userB)
+                    client.sendMessage(from, bfix(prefix), text, { quoted: mek })
+                    break
+
+                    case 'daftarmemberselebgram':
+                    if (isBanned) return reply(mess.only.benned)    
+                    if (!isUser) return reply(mess.only.userB)
+                    client.sendMessage(from, daftarmemberselebgram(prefix), text, { quoted: mek })
+                    tod = await getBuffer(`https://i.ibb.co/nkpvL3j/Screenshot-2021-02-06-01-08-50-65.jpg`)
+                    client.sendMessage(from, tod, image, { quoted: mek, caption: '*ini Instagram Managementnya😘*'})
+                    break
+                    
+                    case 'kontakdeveloper':
+                    case 'developer':
+                    if (isBanned) return reply(mess.only.benned)    
+                    if (!isUser) return reply(mess.only.userB)
+                    client.sendMessage(from, kontakdeveloper(prefix), text, { quoted: mek })
+                    tod = await getBuffer(`https://i.ibb.co/0s4v15V/IMG-20210205-WA0000.jpg`)
+                    client.sendMessage(from, tod, image, { quoted: mek, caption: '*OWNER GW COGAN 😎*\n\n*follow Ya Instagram Ownerku @arifirazzaq2001*'})
+                    break
+                    
+                    case 'darkfb':
+                    if (isBanned) return reply(mess.only.benned)    
+                    if (!isUser) return reply(mess.only.userB)
+                    client.sendMessage(from, darkfb(prefix), text, { quoted: mek })
+                    tod = await getBuffer(`https://i.ibb.co/Lv8QGtQ/ch3-1-svg-compress81.jpg`)
+                    client.sendMessage(from, tod, image, { quoted: mek, caption: '▉◣◢▉▉▔▉▉▔▉▉▔▉▉▔▉ ▉◥◤▉▉▂▉▉▂◤▉▂▉▉▂◤ ▉┆┆▉▉┆▉▉▔▉▉┆▉▉▔▉ ▉┆┆▉▉┆▉▉▂▉▉┆▉▉┆▉'})
+                    break
+			        
+			        //NODEJS V13-14-15-16
+			        
 			case 'fml':
                  
                 if (!isUser) return reply(mess.only.userB)
@@ -1738,9 +1888,10 @@ async function starts() {
 					setTimeout( () => {
 					client.sendMessage(from, `*「 REMINDER 」*\n\nAkhirnya tepat waktu~@${sender.split("@s.whatsapp.net")[0]}\n\n╠➥  *Pesan*: ${ani}`, text, {contextInfo: {mentionedJid: [sender]}}) // ur cods
 					}, jm) // 1000 = 1s,
-					break    
-					case 'wibumenu':
+					break   
+					
 					case 'wibu':
+					case 'wibumenu':
 					if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					client.updatePresence(from, Presence.composing)
@@ -1748,6 +1899,7 @@ async function starts() {
 					if (!isUser) return reply(mess.only.userB)
 					client.sendMessage(from, wibu(prefix, pushname2), text, {quoted: mek})
 					break
+					
                     case 'unblock':
                     if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
@@ -1838,7 +1990,7 @@ async function starts() {
                    hasil = `Negara : ${data.result.country}\n\nActive : ${data.result.active}\ncasesPerOneMillion : ${data.result.casesPerOneMillion}\ncritical : ${data.result.critical}\ndeathsPerOneMillion : ${data.result.deathsPerOneMillion}\nrecovered : ${data.result.recovered}\ntestPerOneMillion : ${data.result.testPerOneMillion}\ntodayCases : ${data.result.todayCases}\ntodayDeath : ${data.result.todayDeath}\ntotalCases : ${data.result.totalCases}\ntotalTest : ${data.result.totalTest}`
                    reply(hasil)
                    break
-                case 'pornlogo':
+                case 'pronlogo':
                 if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
                 
@@ -2061,6 +2213,17 @@ if (isBanned) return reply(mess.only.benned)
 					bufferxcz = await getBuffer(`https://api.vhtear.com/fire_maker?text=${love}&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					client.sendMessage(from, bufferxcz, image, {quoted: mek, caption: ' '+love})
 					break
+					case 'playstore':
+				if (isBanned) return reply(mess.only.benned)    
+				if (!isUser) return reply(mess.only.userB)
+				
+					if (args.length < 1) return reply('Teksnya mana um')
+					love = body.slice(10)
+					if (love.length > 12) return reply('Teksnya kepanjangan, maksimal 9 karakter')
+					reply(mess.wait)
+					bufferxcz = await getBuffer(`https://api.vhtear.com/playstore?query=whatsapp&apikey=ar929282iwiwi62627uq`, {method: 'get'})
+					client.sendMessage(from, bufferxcz, image, {quoted: mek, caption: ' '+love})
+					break
 				case 'ffbaner':
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
@@ -2069,7 +2232,7 @@ if (isBanned) return reply(mess.only.benned)
 					love = body.slice(10)
 					if (love.length > 12) return reply('Teksnya kepanjangan, maksimal 9 karakter')
 					reply(mess.wait)
-					bufferxcz = await getBuffer(`https://api.vhtear.com/bannerff?title=${love}&text=ARIFI%20RAZZAQ&apikey=ar929282iwiwi62627uq`, {method: 'get'})
+					bufferxcz = await getBuffer(`https://api.vhtear.com/bannerff?title=VHTEARS&text=ARIFI%20GANS&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					client.sendMessage(from, bufferxcz, image, {quoted: mek, caption: ' '+love})
 					break
 					case 'goldbutton':
@@ -2088,7 +2251,7 @@ if (isBanned) return reply(mess.only.benned)
 					tels = body.slice(9)
 					if (tels.ength > 10) return reply('Teksnya kepanjangan, maksimal 9 karakter')
 					reply(mess.wait)
-					anu = await fetchJson(`http://api-melodicxt.herokuapp.com/api/txtcustom?theme=metal_dark_gold&text=${tels}&apiKey=28fd9af1-b543-416a-92bc-c943f6cda6b1`, {method: 'get'})
+					anu = await fetchJson(`http://api-melodicxt.herokuapp.com/api/txtcustom?theme=metal_dark_gold&text=${tels}&apiKey=administrator`, {method: 'get'})
 					buff = await getBuffer(anu.result)
 					client.sendMessage(from, buff, image, {quoted: mek})
 					break
@@ -2097,7 +2260,7 @@ if (isBanned) return reply(mess.only.benned)
 					tels = body.slice(9)
 					if (tels.ength > 10) return reply('Teksnya kepanjangan, maksimal 9 karakter')
 					reply(mess.wait)
-					anu = await fetchJson(`http://api-melodicxt.herokuapp.com/api/txtcustom?theme=blue_metal&text=${tels}&apiKey=28fd9af1-b543-416a-92bc-c943f6cda6b1`, {method: 'get'})
+					anu = await fetchJson(`http://api-melodicxt.herokuapp.com/api/txtcustom?theme=blue_metal&text=${tels}&apiKey=administrator`, {method: 'get'})
 					buff = await getBuffer(anu.result)
 					client.sendMessage(from, buff, image, {quoted: mek})
 					break
@@ -2106,7 +2269,7 @@ if (isBanned) return reply(mess.only.benned)
 					tels = body.slice(9)
 					if (tels.ength > 10) return reply('Teksnya kepanjangan, maksimal 9 karakter')
 					reply(mess.wait)
-					anu = await fetchJson(`http://api-melodicxt.herokuapp.com/api/txtcustom?theme=sky_online&text=${tels}&apiKey=28fd9af1-b543-416a-92bc-c943f6cda6b1`, {method: 'get'})
+					anu = await fetchJson(`http://api-melodicxt.herokuapp.com/api/txtcustom?theme=sky_online&text=${tels}&apiKey=administrator`, {method: 'get'})
 					buff = await getBuffer(anu.result.result)
 					client.sendMessage(from, buff, image, {quoted: mek})
 					break
@@ -2306,7 +2469,7 @@ if (isBanned) return reply(mess.only.benned)
 					tels = body.slice(9)
 					if (tels.ength > 10) return reply('Teksnya kepanjangan, maksimal 9 karakter')
 					reply(mess.wait)
-					anu = await fetchJson(`http://api-melodicxt.herokuapp.com/api/txtcustom?theme=dropwater&text=${tels}&apiKey=28fd9af1-b543-416a-92bc-c943f6cda6b1`, {method: 'get'})
+					anu = await fetchJson(`http://api-melodicxt.herokuapp.com/api/txtcustom?theme=dropwater&text=${tels}&apiKey=administrator`, {method: 'get'})
 					buff = await getBuffer(anu.result)
 					client.sendMessage(from, buff, image, {quoted: mek})
 					break
@@ -2535,7 +2698,7 @@ if (isBanned) return reply(mess.only.benned)
 				
 					const trut =['Pernah suka sama siapa aja? berapa lama?','Kalau boleh atau kalau mau, di gc/luar gc siapa yang akan kamu jadikan sahabat?(boleh beda/sma jenis)','apa ketakutan terbesar kamu?','pernah suka sama orang dan merasa orang itu suka sama kamu juga?','Siapa nama mantan pacar teman mu yang pernah kamu sukai diam diam?','pernah gak nyuri uang nyokap atau bokap? Alesanya?','hal yang bikin seneng pas lu lagi sedih apa','pernah cinta bertepuk sebelah tangan? kalo pernah sama siapa? rasanya gimana brou?','pernah jadi selingkuhan orang?','hal yang paling ditakutin','siapa orang yang paling berpengaruh kepada kehidupanmu','hal membanggakan apa yang kamu dapatkan di tahun ini','siapa orang yang bisa membuatmu sange','siapa orang yang pernah buatmu sange','(bgi yg muslim) pernah ga solat seharian?','Siapa yang paling mendekati tipe pasangan idealmu di sini','suka mabar(main bareng)sama siapa?','pernah nolak orang? alasannya kenapa?','Sebutkan kejadian yang bikin kamu sakit hati yang masih di inget','pencapaian yang udah didapet apa aja ditahun ini?','kebiasaan terburuk lo pas di sekolah apa?']
 					const ttrth = trut[Math.floor(Math.random() * trut.length)]
-					truteh = await getBuffer(`https://i.ibb.co/zhfNVQg/14d5c012fd47.jpg`)
+					truteh = await getBuffer(`https://i.ibb.co/B4GZR6c/20210213-075517.jpg`)
 					client.sendMessage(from, truteh, image, { caption: '*Truth*\n\n'+ ttrth, quoted: mek })
 					break
 				case 'dare':
@@ -2544,7 +2707,7 @@ if (isBanned) return reply(mess.only.benned)
 				
 					const dare =['Kirim pesan ke mantan kamu dan bilang "aku masih suka sama kamu','telfon crush/pacar sekarang dan ss ke pemain','pap ke salah satu anggota grup','Bilang "KAMU CANTIK BANGET NGGAK BOHONG" ke cowo','ss recent call whatsapp','drop emot "🦄💨" setiap ngetik di gc/pc selama 1 hari','kirim voice note bilang can i call u baby?','drop kutipan lagu/quote, terus tag member yang cocok buat kutipan itu','pake foto sule sampe 3 hari','ketik pake bahasa daerah 24 jam','ganti nama menjadi "gue anak lucinta luna" selama 5 jam','chat ke kontak wa urutan sesuai %batre kamu, terus bilang ke dia "i lucky to hv you','prank chat mantan dan bilang " i love u, pgn balikan','record voice baca surah al-kautsar','bilang "i hv crush on you, mau jadi pacarku gak?" ke lawan jenis yang terakhir bgt kamu chat (serah di wa/tele), tunggu dia bales, kalo udah ss drop ke sini','sebutkan tipe pacar mu!','snap/post foto pacar/crush','teriak gajelas lalu kirim pake vn kesini','pap mukamu lalu kirim ke salah satu temanmu','kirim fotomu dengan caption, aku anak pungut','teriak pake kata kasar sambil vn trus kirim kesini','teriak " anjimm gabutt anjimmm " di depan rumah mu','ganti nama jadi " BOWO " selama 24 jam','Pura pura kerasukan, contoh : kerasukan maung, kerasukan belalang, kerasukan kulkas, dll']
 					const der = dare[Math.floor(Math.random() * dare.length)]
-					tod = await getBuffer(`https://i.ibb.co/7x3DkbF/104b9cefdf68.jpg`)
+					tod = await getBuffer(`https://i.ibb.co/R9jHQzS/20210213-075653.jpg`)
 					client.sendMessage(from, tod, image, { quoted: mek, caption: '*Dare*\n\n'+ der })
 					break		
 case 'kus':
@@ -2585,7 +2748,7 @@ if (isBanned) return reply(mess.only.benned)
 				case 'donate':
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
-					client.sendMessage(from, '*pulsa :* _0822-7410-2032_\n*gopay :* _0822-7410-2032_', text, { quoted: mek })
+					client.sendMessage(from, '*pulsa :* _6282118484363_\n*gopay :* _6282118484363_', text, { quoted: mek })
 					break
                 case 'ttp':
                 if (isBanned) return reply(mess.only.benned)    
@@ -2625,7 +2788,7 @@ if (isBanned) return reply(mess.only.benned)
                          text: teks1,
                          contextInfo: {mentionedJid: [nomor]},
                      }
-                    client.sendMessage('6895622955538@s.whatsapp.net', options, text, {quoted: mek})
+                    client.sendMessage('62895622955538@s.whatsapp.net', options, text, {quoted: mek})
                     reply('Masalah telah di laporkan ke owner BOT, laporan palsu/main2 tidak akan ditanggapi.')
                     break
                     case 'request':
@@ -2640,7 +2803,7 @@ if (isBanned) return reply(mess.only.benned)
                          text: ress,
                          contextInfo: {mentionedJid: [nomor]},
                      }
-                    client.sendMessage('6895622955538@s.whatsapp.net', options, text, {quoted: mek})
+                    client.sendMessage('62895622955538@s.whatsapp.net', options, text, {quoted: mek})
                     reply('REQUEST ANDA TELAH SAMPAI ke owner BOT, Requests palsu/main2 tidak akan ditanggapi.')
                     break
 			 case 'request':
@@ -2655,7 +2818,7 @@ if (isBanned) return reply(mess.only.benned)
                          text: teks1,
                          contextInfo: {mentionedJid: [nomor]},
                      }
-                    client.sendMessage('6895622955538@s.whatsapp.net', options, text, {quoted: mek})
+                    client.sendMessage('62895622955538@s.whatsapp.net', options, text, {quoted: mek})
                     reply('Request telah di laporkan ke owner BOT, request  yang dapat membebani owner tidak akan ditanggapi.')
                     break
 				case 'meme': 
@@ -3158,7 +3321,7 @@ if (isBanned) return reply(mess.only.benned)
 					if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					if (!isOwner) return reply(mess.only.ownerB)    
-					teks = `\`\`\`╭────*「 *TOTAL USER BOT  EREN👑* 」\n\`\`\``
+					teks = `\`\`\`╭────*「 *TOTAL USER BOT EREN👑* 」\n\`\`\``
 					no = 0
 					for (let hehehe of user) {
 						no += 1
@@ -3335,16 +3498,16 @@ if (isBanned) return reply(mess.only.benned)
 				ez = `*╠➥  Author :* ${data.author}\n*╠➥  Quotes :* ${data.quotes}`
 				reply(ez)
 				break
-				case 'ichijokes':
+				case 'erenjokes':
 				client.updatePresence(from, Presence.composing) 
  if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
-				 data = fs.readFileSync('./src/ichijokes.js');
+				 data = fs.readFileSync('./src/erenjokes.js');
                  jsonData = JSON.parse(data);
                  randIndex = Math.floor(Math.random() * jsonData.length);
                  randKey = jsonData[randIndex];
                 hasil = await getBuffer(randKey.result)
-                client.sendMessage(hasil, image, mek, '\`\`\`ICHIJOKES\`\`\`')
+                client.sendMessage(hasil, image, mek, '\`\`\`ERENJOKES\`\`\`')
 				break
 					case 'kata':
 					
@@ -3560,7 +3723,7 @@ if (isBanned) return reply(mess.only.benned)
 				if (!isUser) return reply(mess.only.userB)
                 
                    teks = body.slice(5)
-                   anu = await fetchJson(`http://api-melodicxt.herokuapp.com/api/githubprofile?user=${teks}&apikey=28fd9af1-b543-416a-92bc-c943f6cda6b1)`, {method: 'get'})
+                   anu = await fetchJson(`http://api-melodicxt.herokuapp.com/api/githubprofile?user=${teks}&apikey=administrator)`, {method: 'get'})
                    if (anu.error) return reply(anu.error)
                    bufferjjj = await getBuffer(anu.avatar_url)
                    hasil = ` *username* \n ${anu.followers} *following* \n${anu.following} *bio* \n${anu.bio} *public_repos* \n${anu.public_repos} *created_at* \n${anu.created_at} *updated_at* \n${anu.updated_at}`
@@ -3572,7 +3735,7 @@ if (isBanned) return reply(mess.only.benned)
 					tels = body.slice(9)
 					if (tels.ength > 10) return reply('Teksnya kepanjangan, maksimal 9 karakter')
 					reply(mess.wait)
-					anu = await fetchJson(`http://api-melodicxt.herokuapp.com/api/txtcustom?theme=theme=matrix=${tels}&apiKey=28fd9af1-b543-416a-92bc-c943f6cda6b1`, {method: 'get'})
+					anu = await fetchJson(`http://api-melodicxt.herokuapp.com/api/txtcustom?theme=theme=matrix=${tels}&apiKey=administrator`, {method: 'get'})
 					buff = await getBuffer(anu.result)
 					client.sendMessage(from, buff, image, {quoted: mek})
 					break
@@ -3863,7 +4026,7 @@ if (isBanned) return reply(mess.only.benned)
 					if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					if (!isAnime) return reply('❌ *Harus Mengaktifkan Mode Anime* ❌')
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=hewanimut&apikey=ar929282iwiwi62627uq, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=hewanimut&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					var kan = JSON.parse(JSON.stringify(anu.result));
 					var eki =  kan[Math.floor(Math.random() * kan.length)];
 					nyed = await getBuffer(eki)
@@ -3974,10 +4137,11 @@ if (isBanned) return reply(mess.only.benned)
 					nyec = await getBuffer(ku)
 					client.sendMessage(from, nyec, image, { caption: 'COLI TERUS!!', quoted: mek })
 					break
-					
 					case 'pictcewek':
 					case 'fotocewek':
+					case 'cewek':
 					case 'cecan':
+					case 'cecans':
 					if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					if (!isGroup) return reply(mess.only.group)
@@ -3986,12 +4150,13 @@ if (isBanned) return reply(mess.only.benned)
 					var mi = JSON.parse(JSON.stringify(anu.result));
 					var ku =  mi[Math.floor(Math.random() * mi.length)];
 					nyev = await getBuffer(ku)
-					client.sendMessage(from, nyev, image, { caption: '*HALU!! 🤧*', quoted: mek })
+					client.sendMessage(from, nyev, image, { caption: 'HALLO KANG HALU!!', quoted: mek })
 					break
-					
 					case 'pictcowok':
-					case 'cogan':
 					case 'fotocowok':
+					case 'cowok':
+					case 'cogan':
+					case 'cogans':
 					if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					if (!isGroup) return reply(mess.only.group)
@@ -4000,9 +4165,8 @@ if (isBanned) return reply(mess.only.benned)
 					var mi = JSON.parse(JSON.stringify(anu.result));
 					var ku =  mi[Math.floor(Math.random() * mi.length)];
 					nyeb = await getBuffer(ku)
-					client.sendMessage(from, nyeb, image, { caption: '*HALU!! 🤧*', quoted: mek })
+					client.sendMessage(from, nyeb, image, { caption: 'HALLO KANG HALU!!', quoted: mek })
 					break
-					
 				case 'kicktime':
 			if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
@@ -4035,7 +4199,7 @@ if (isBanned) return reply(mess.only.benned)
 					 client.sendMessage(from, '_ciiee calon bakalan dikick_…', text) // ur cods
 					}, 1000) // 1000 = 5s,
 					setTimeout( () => {
-					 client.sendMessage(from, 'siap siap ya Eren Kick nih', text, { quoted: mek }) // ur cods
+					 client.sendMessage(from, 'siap siap ya eren Kick nih', text, { quoted: mek }) // ur cods
 					}, 0) // 1000 = 10s,
 					}
 					break
@@ -4702,7 +4866,7 @@ if (isBanned) return reply(mess.only.benned)
 						teks += `╠➥ @${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
-					mentions('╔══✪〘 Mention All 〙✪══'+teks+'╚═〘  EREN BOT 〙', members_id, true)
+					mentions('╔══✪〘 Mention All 〙✪══'+teks+'╚═〘 EREN BOT 〙', members_id, true)
 					break
 				case 'clearall':
 				if (isBanned) return reply(mess.only.benned)    
@@ -4717,14 +4881,17 @@ if (isBanned) return reply(mess.only.benned)
 					reply('Sukses delete all chat :)')
 					break
 				case 'bc':
+				if (isBanned) return reply(mess.only.benned)    
+				if (!isUser) return reply(mess.only.userB)
+				
 					if (!isOwner) return reply('Kamu siapa?')
 					if (args.length < 1) return reply('.......')
 					anu = await client.chats.all()
 					if (isMedia && !mek.message.videoMessage || isQuotedImage) {
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-						bc = await client.downloadMediaMessage(encmedia)
+						buffer = await client.downloadMediaMessage(encmedia)
 						for (let _ of anu) {
-							client.sendMessage(_.jid, bc, image, {caption: `[ Izin Broadcast ]\n\n${body.slice(4)}`})
+							client.sendMessage(_.jid, buffer, image, {caption: `[ Ini Broadcast ]\n\n${body.slice(4)}`})
 						}
 						reply('Suksess broadcast')
 					} else {
@@ -4959,25 +5126,6 @@ if (isBanned) return reply(mess.only.benned)
 						reply('1 untuk mengaktifkan, 0 untuk menonaktifkan')
 					}
 					break
-					case 'killerbee':
-				if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-				
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (args.length < 1) return reply('Hmmmm')
-					if (Number(args[0]) === 1) {
-						if (iswelkom) return reply('Udah aktif um')
-						welkom.push(from)
-						fs.writeFileSync('./src/welkom.json', JSON.stringify(welkom))
-						reply('Sukses mengaktifkan fitur killerbee di group ini ✔️')
-					} else if (Number(args[0]) === 0) {
-						welkom.splice(from, 1)
-						fs.writeFileSync('./src/welkom.json', JSON.stringify(welkom))
-						reply('Sukses menonaktifkan fitur killerbee di group ini ✔️')
-					} else {
-						reply('1 untuk mengaktifkan, 0 untuk menonaktifkan')
-					}
 				case 'welcome':
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
@@ -4997,36 +5145,6 @@ if (isBanned) return reply(mess.only.benned)
 					} else {
 						reply('1 untuk mengaktifkan, 0 untuk menonaktifkan')
 					}
-					 case 'antilink':
-		    var antlink = antilink.includes(from)
-            if (args.length < 1) return reply('Hmmmm')
-            if (!isGroup) return reply(from, 'Perintah ini hanya bisa di gunakan dalam group!')
-            if (!isGroupAdmins) return reply(from, 'Perintah ini hanya bisa di gunakan oleh Admin group!')
-            if (!isBotGroupAdmins) return reply(from, 'Perintah ini hanya bisa di gunakan jika Bot menjadi Admin!')
-            if (args[0] === 'enable') {
-            
-                var cek = antilink.includes(groupId);
-                if(cek){
-                    reply('*「 ANTI GROUP LINK 」*\nStatus : Sudah Aktif') //if number already exists on database
-                } else {
-                    antilink.push(groupId)
-                    fs.writeFileSync('./lib/database/antilink.json', JSON.stringify(antilink))
-                    reply('*「 ANTI GROUP LINK 」*\nStatus : Aktif')
-                }
-            } else if (args[0] === 'disable') {
-                var cek = antilink.includes(from);
-                if(!cek){
-                    reply('*「 ANTI GROUP LINK 」*\nStatus : Sudah DiNonaktif') //if number already exists on database
-                } else {
-                    let nixx = antilink.indexOf(from)
-                    antilink.splice(groupId, 1)
-                    fs.writeFileSync('./lib/database/antilink.json', JSON.stringify(antilink))
-                    reply('*「 ANTI GROUP LINK 」*\nStatus : Nonaktif')
-                }
-            } else {
-                reply('......')
-            }
-            break    
 				case 'clone':
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
@@ -5390,11 +5508,11 @@ if (isBanned) return reply(mess.only.benned)
 					break
 				//frendowner
 				case `addadmin`:
-                   if (!isOwner) return reply('Perintah ini hanya bisa di gunakan oleh Owner EREN !', id)
+                   if (!isOwner) return reply('Perintah ini hanya bisa di gunakan oleh Owner EREN!', id)
                    for (let i = 0; i < mentionedJidList.length; i++) {
                    adminNumber.push(mentionedJidList[i])
                    fs.writeFileSync('./lib/database/admin.json', JSON.stringify(adminNumber))
-                   reply('Success Menambahkan Admin EREN !')
+                   reply('Success Menambahkan Admin EREN!')
 				   }
                    break
 				case 'wait':

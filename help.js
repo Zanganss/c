@@ -1,7 +1,7 @@
 const help = (prefix) => { 
 	return `
 ╭▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂╮
-┃╭┅┈⪼ *EREN AKAME BOT─╝*
+┃╭┅┈⪼ *AKAME BOT─╝*
 ┊╰⧿─╗ *THANX TO ALLAH*
 ┊ ⛬ ╔╯ *VERSION : V4.104.020*
 ┠⧿⧿╯⧿⧿⧿⧿⧿⧿⧿⧿⧿⧿⧿⧿⧿⧿⧿⧿

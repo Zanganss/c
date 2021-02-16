@@ -318,7 +318,7 @@ async function starts() {
 			const content = JSON.stringify(mek.message)
 			const from = mek.key.remoteJid
 			const type = Object.keys(mek.message)[0]
-			const apiKey = 'pJ6xKSMPCT8QMcvBzGFY'
+			const apiKey = 'ar929282iwiwi62627uq'
 			const insom = from.endsWith('@g.us')
 			const botFebb = insom ? mek.participant : mek.key.remoteJid
 			pushname2 = client.contacts[botFebb] != undefined ? client.contacts[botFebb].vname || client.contacts[botFebb].notify : undefined
@@ -586,7 +586,7 @@ async function starts() {
 						ranw = getRandom('.webp')
 						ranp = getRandom('.png')
 						reply(mess.wait)
-						keyrmbg = 'pJ6xKSMPCT8QMcvBzGFY'
+						keyrmbg = 'ar929282iwiwi62627uq'
 						await removeBackgroundFromImageFile({path: media, apiKey: keyrmbg.result, size: 'auto', type: 'auto', ranp}).then(res => {
 							fs.unlinkSync(media)
 							let buffer = Buffer.from(res.base64img, 'base64')
@@ -635,7 +635,7 @@ async function starts() {
                                         teks = `${anu.display_url}`
                                         ranpp = getRandom('.png')
                                         ranop = getRandom('.webp')
-                                        anu1 = await fetchJson(`https://api.vhtear.com/removebgwithurl?link=${teks}&apikey=Jsieu8287362jshre82`, {method: 'get'})
+                                        anu1 = await fetchJson(`https://api.vhtear.com/removebgwithurl?link=${teks}&apikey=ar929282iwiwi62627uq`, {method: 'get'})
                                          exec(`wget ${anu1.result.image} -O ${ranpp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${ranop}`, (err) => {
                                                 fs.unlinkSync(ranp)
                                                 if (err) return reply(mess.error.stick)
@@ -944,7 +944,7 @@ async function starts() {
 					if (isBanned) return reply(mess.only.benned)    
 				   if (args.length < 1) return reply('Apa yang mau dicari kak?')
 					goo = body.slice(7)
-					anu = await fetchJson(`https://api.vhtear.com/googleimg?query=${goo}&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/googleimg?query=${goo}&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					reply(mess.wait)
 				    var pol = JSON.parse(JSON.stringify(anu.result.result_search));
                     var tes2 =  pol[Math.floor(Math.random() * pol.length)];
@@ -1285,9 +1285,11 @@ async function starts() {
                 case 'baka':
             case 'onichan':
             case 'bodoh':
-                client.sendPtt(from, './arifirazzaq/baka.mp3', {quoted: mek, ptt:true})
+            if (isBanned) return reply(mess.only.benned)    
+				if (!isUser) return reply(mess.only.userB)
+                client.sendMessage(from, './arifirazzaq/baka.mp3', audio/mp3, {quoted: mek, ptt:true})
                 break
-                
+          
                 
                 
 				case 'info':
@@ -1717,7 +1719,7 @@ async function starts() {
                 if (!isPremium) return reply(mess.only.premi)
                 if (!isUser) return reply(mess.only.userB)
                 reply(mess.wait)
-                anu = await fetchJson(`https://api.vhtear.com/ytmp3?query=${body.slice(6)}&apikey=Jsieu8287362jshre82`, {method: 'get'})
+                anu = await fetchJson(`https://api.vhtear.com/ytmp3?query=${body.slice(6)}&apikey=ar929282iwiwi62627uq`, {method: 'get'})
                if (anu.error) return reply(anu.error)
                  infomp3 = `*Lagu Ditemukan!!!*\nJudul : ${anu.result.title}\nDurasi : ${anu.result.duration}\nUkuran : ${anu.result.size}\n\n*TUNGGU SEBENTAR LAGI DIKIRIM MOHON JANGAN SPAM YA SAYANG*`
                 buffer = await getBuffer(anu.result.thumb)
@@ -1788,7 +1790,7 @@ async function starts() {
 					teks = body.slice(11)
 					if (teks.length > 8) return reply('Teksnya kepanjangan, maksimal 8 karakter')
 					reply(mess.wait)
-					bufasfer = await getBuffer(`https://api.vhtear.com/galaxytext?text=${teks}&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					bufasfer = await getBuffer(`https://api.vhtear.com/galaxytext?text=${teks}&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					client.sendMessage(from, bufasfer, image, {quoted: mek})
 					break
 					case 'citacita': 
@@ -1857,7 +1859,7 @@ async function starts() {
 					if (args.length < 1) return reply('Teksnya mana kak? >.<')
 					teks = body.slice(6)
 					reply(mess.wait)
-					loog = await getBuffer(`https://api.vhtear.com/gamelogo?text=${teks}&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					loog = await getBuffer(`https://api.vhtear.com/gamelogo?text=${teks}&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					client.sendMessage(from, loog, image, {quoted: mek, caption: 'Logo '+teks})
 					break
 				case 'primbonjodoh':
@@ -1867,7 +1869,7 @@ async function starts() {
 					var gh5 = body.slice(14)
 					var gbl11 = gh5.split("|")[0];
 					var gbl21 = gh5.split("|")[1];
-					anu = await fetchJson(`https://api.vhtear.com/primbonjodoh?nama=${gbl11}&pasangan=${gbl21}&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/primbonjodoh?nama=${gbl11}&pasangan=${gbl21}&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					reply(anu.result.hasil)
 					break
 				case 'ramaljadian':
@@ -1878,7 +1880,7 @@ async function starts() {
 					var gbl16 = gh7.split("|")[0];
 					var gbl26 = gh7.split("|")[1];
 					var gbl36 = gh7.split("|")[2];
-					anu = await fetchJson(`https://api.vhtear.com/harijadian?tgl=${gbl16}&bln=${gbl26}&thn=${gbl36}&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/harijadian?tgl=${gbl16}&bln=${gbl26}&thn=${gbl36}&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					reply(anu.result.hasil)
 					break
                 case 'tahta':
@@ -1890,7 +1892,7 @@ async function starts() {
 					teks = body.slice(7)
 					if (teks.length > 9) return reply('Teksnya kepanjangan, maksimal 9 karakter')
 					reply(mess.wait)
-					bufferrty = await getBuffer(`https://api.vhtear.com/hartatahta?text=${teks}&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					bufferrty = await getBuffer(`https://api.vhtear.com/hartatahta?text=${teks}&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					client.sendMessage(from, bufferrty, image, {quoted: mek, caption: 'Harta Tahta '+teks})
 					break
 					case 'pinterest':
@@ -1898,7 +1900,7 @@ async function starts() {
 				if (!isUser) return reply(mess.only.userB)
 					if (args.length < 1) return reply(mess.search)
 					pinte = body.slice(11)
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=${pinte}&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=${pinte}&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					reply(mess.wait)
 					var pin = JSON.parse(JSON.stringify(anu.result));
 					var trest =  pin[Math.floor(Math.random() * pin.length)];
@@ -2034,7 +2036,7 @@ if (isBanned) return reply(mess.only.benned)
 					love = body.slice(10)
 					if (love.length > 12) return reply('Teksnya kepanjangan, maksimal 9 karakter')
 					reply(mess.wait)
-					bufferxcz = await getBuffer(`https://api.vhtear.com/lovemessagetext?text=${love}&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					bufferxcz = await getBuffer(`https://api.vhtear.com/lovemessagetext?text=${love}&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					client.sendMessage(from, bufferxcz, image, {quoted: mek, caption: ' '+love})
 					break
 				case 'metalteks':
@@ -2045,7 +2047,7 @@ if (isBanned) return reply(mess.only.benned)
 					love = body.slice(10)
 					if (love.length > 12) return reply('Teksnya kepanjangan, maksimal 9 karakter')
 					reply(mess.wait)
-					bufferxcz = await getBuffer(`https://api.vhtear.com/metal_maker?text=${love}&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					bufferxcz = await getBuffer(`https://api.vhtear.com/metal_maker?text=${love}&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					client.sendMessage(from, bufferxcz, image, {quoted: mek, caption: ' '+love})
 					break
 				case 'apiteks':
@@ -2056,7 +2058,7 @@ if (isBanned) return reply(mess.only.benned)
 					love = body.slice(10)
 					if (love.length > 12) return reply('Teksnya kepanjangan, maksimal 9 karakter')
 					reply(mess.wait)
-					bufferxcz = await getBuffer(`https://api.vhtear.com/fire_maker?text=${love}&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					bufferxcz = await getBuffer(`https://api.vhtear.com/fire_maker?text=${love}&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					client.sendMessage(from, bufferxcz, image, {quoted: mek, caption: ' '+love})
 					break
 				case 'ffbaner':
@@ -2067,7 +2069,7 @@ if (isBanned) return reply(mess.only.benned)
 					love = body.slice(10)
 					if (love.length > 12) return reply('Teksnya kepanjangan, maksimal 9 karakter')
 					reply(mess.wait)
-					bufferxcz = await getBuffer(`https://api.vhtear.com/bannerff?title=${love}&text=ARIFI%20RAZZAQ&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					bufferxcz = await getBuffer(`https://api.vhtear.com/bannerff?title=${love}&text=ARIFI%20RAZZAQ&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					client.sendMessage(from, bufferxcz, image, {quoted: mek, caption: ' '+love})
 					break
 					case 'goldbutton':
@@ -2086,7 +2088,7 @@ if (isBanned) return reply(mess.only.benned)
 					tels = body.slice(9)
 					if (tels.ength > 10) return reply('Teksnya kepanjangan, maksimal 9 karakter')
 					reply(mess.wait)
-					anu = await fetchJson(`http://api-melodicxt.herokuapp.com/api/txtcustom?theme=metal_dark_gold&text=${tels}&apiKey=administrator`, {method: 'get'})
+					anu = await fetchJson(`http://api-melodicxt.herokuapp.com/api/txtcustom?theme=metal_dark_gold&text=${tels}&apiKey=28fd9af1-b543-416a-92bc-c943f6cda6b1`, {method: 'get'})
 					buff = await getBuffer(anu.result)
 					client.sendMessage(from, buff, image, {quoted: mek})
 					break
@@ -2095,7 +2097,7 @@ if (isBanned) return reply(mess.only.benned)
 					tels = body.slice(9)
 					if (tels.ength > 10) return reply('Teksnya kepanjangan, maksimal 9 karakter')
 					reply(mess.wait)
-					anu = await fetchJson(`http://api-melodicxt.herokuapp.com/api/txtcustom?theme=blue_metal&text=${tels}&apiKey=administrator`, {method: 'get'})
+					anu = await fetchJson(`http://api-melodicxt.herokuapp.com/api/txtcustom?theme=blue_metal&text=${tels}&apiKey=28fd9af1-b543-416a-92bc-c943f6cda6b1`, {method: 'get'})
 					buff = await getBuffer(anu.result)
 					client.sendMessage(from, buff, image, {quoted: mek})
 					break
@@ -2104,7 +2106,7 @@ if (isBanned) return reply(mess.only.benned)
 					tels = body.slice(9)
 					if (tels.ength > 10) return reply('Teksnya kepanjangan, maksimal 9 karakter')
 					reply(mess.wait)
-					anu = await fetchJson(`http://api-melodicxt.herokuapp.com/api/txtcustom?theme=sky_online&text=${tels}&apiKey=administrator`, {method: 'get'})
+					anu = await fetchJson(`http://api-melodicxt.herokuapp.com/api/txtcustom?theme=sky_online&text=${tels}&apiKey=28fd9af1-b543-416a-92bc-c943f6cda6b1`, {method: 'get'})
 					buff = await getBuffer(anu.result.result)
 					client.sendMessage(from, buff, image, {quoted: mek})
 					break
@@ -2137,7 +2139,7 @@ if (isBanned) return reply(mess.only.benned)
 					thun = body.slice(9)
 					if (thun.length > 10) return reply('Teksnya kepanjangan, maksimal 9 karakter')
 					reply(mess.wait)
-					bufferw = await getBuffer(`https://api.vhtear.com/thundertext?text=${thun}&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					bufferw = await getBuffer(`https://api.vhtear.com/thundertext?text=${thun}&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					client.sendMessage(from, bufferw, image, {quoted: mek, caption: ' '+thun})
 					break
                 case 'stiltext':
@@ -2147,7 +2149,7 @@ if (isBanned) return reply(mess.only.benned)
                       gdh = body.slice(11)
                       gl1 = gdh.split("|")[0];
                       gl2 = gdh.split("|")[1];
-                      buffere = await getBuffer(`https://api.vhtear.com/silktext?text=${gl1}&text2=${gl2}&apikey=Jsieu8287362jshre82`, {method: 'get'})
+                      buffere = await getBuffer(`https://api.vhtear.com/silktext?text=${gl1}&text2=${gl2}&apikey=ar929282iwiwi62627uq`, {method: 'get'})
                       reply(mess.wait)
                       client.sendMessage(from, buffere, image, {quoted: mek, caption: 'thund ni '+gh})
                       break
@@ -2204,7 +2206,7 @@ if (isBanned) return reply(mess.only.benned)
 					if (args.length < 1) return reply(mess.blank)
 					part = body.slice(7)
 					reply(mess.wait)
-					bufferu = await getBuffer(`https://api.vhtear.com/partytext?text=${part}&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					bufferu = await getBuffer(`https://api.vhtear.com/partytext?text=${part}&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					client.sendMessage(from, bufferu, image, {caption: 'Nih kak', quoted: mek})
 					break
 				case 'mlogo':
@@ -2213,7 +2215,7 @@ if (isBanned) return reply(mess.only.benned)
 					if (args.length < 1) return reply(mess.blank)
 					part = body.slice(7)
 					reply(mess.wait)
-					bufferu = await getBuffer(`https://api.vhtear.com/logoml?hero=miya&text=${part}&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					bufferu = await getBuffer(`https://api.vhtear.com/logoml?hero=miya&text=${part}&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					client.sendMessage(from, bufferu, image, {caption: 'Nih kak', quoted: mek})
 					break
 				case 'shadow':
@@ -2295,7 +2297,7 @@ if (isBanned) return reply(mess.only.benned)
 					tels5 = body.slice(7)
 					if (tels5.length > 10) return reply('Teksnya kepanjangan, maksimal 10 karakter')
 					reply(mess.wait)
-					bufferi = await getBuffer(`https://api.vhtear.com/romancetext?text=${tels5}&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					bufferi = await getBuffer(`https://api.vhtear.com/romancetext?text=${tels5}&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					client.sendMessage(from, bufferi, image, {caption: 'Nih kak', quoted: mek})
 					break
 					
@@ -2304,7 +2306,7 @@ if (isBanned) return reply(mess.only.benned)
 					tels = body.slice(9)
 					if (tels.ength > 10) return reply('Teksnya kepanjangan, maksimal 9 karakter')
 					reply(mess.wait)
-					anu = await fetchJson(`http://api-melodicxt.herokuapp.com/api/txtcustom?theme=dropwater&text=${tels}&apiKey=administrator`, {method: 'get'})
+					anu = await fetchJson(`http://api-melodicxt.herokuapp.com/api/txtcustom?theme=dropwater&text=${tels}&apiKey=28fd9af1-b543-416a-92bc-c943f6cda6b1`, {method: 'get'})
 					buff = await getBuffer(anu.result)
 					client.sendMessage(from, buff, image, {quoted: mek})
 					break
@@ -2593,7 +2595,7 @@ if (isBanned) return reply(mess.only.benned)
 					ranpl = getRandom('.png')
 					ranol = getRandom('.webp')
 					ttpl = body.slice(5).trim()
-					anuf = await fetchJson(`https://mhankbarbars.herokuapp.com/api/text2image?text=${ttpl}&apiKey=pJ6xKSMPCT8QMcvBzGFY`, {method: 'get'})
+					anuf = await fetchJson(`https://mhankbarbars.herokuapp.com/api/text2image?text=${ttpl}&apiKey=ar929282iwiwi62627uq`, {method: 'get'})
 					if (anuf.error) return reply(anuf.error)
 					exec(`wget ${anuf.result} -O ${ranpl} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${ranol}`, (err) => {
 						fs.unlinkSync(ranpl)
@@ -2690,7 +2692,7 @@ if (isBanned) return reply(mess.only.benned)
 					if (args.length < 1) return reply('teks nya mana om')
 					teksj = body.slice(7)
 					reply(mess.wait)
-					anwu = await fetchJson(`https://api.vhtear.com/walpaper?query=${teksj}&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anwu = await fetchJson(`https://api.vhtear.com/walpaper?query=${teksj}&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					bufferx = await getBuffer(anwu.result.LinkImg)
 					client.sendMessage(from, bufferx, image, {quoted: mek})
 					break
@@ -2844,7 +2846,7 @@ if (isBanned) return reply(mess.only.benned)
 					if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					
-						res = await fetchJson(`https://api.vhtear.com/randomloli&apikey=Jsieu8287362jshre82`, {method: 'get'})
+						res = await fetchJson(`https://api.vhtear.com/randomloli&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 						buffertt = await getBuffer(res.result.result)
 						client.sendMessage(from, buffertt, image, {quoted: mek, caption: 'loli'})
 					} catch (e) {
@@ -2892,7 +2894,7 @@ if (isBanned) return reply(mess.only.benned)
 					if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					
-						res = await fetchJson(`https://api.vhtear.com/randomloli&apikey=Jsieu8287362jshre82`, {method: 'get'})
+						res = await fetchJson(`https://api.vhtear.com/randomloli&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 						buffertt = await getBuffer(res.result.result)
 						client.sendMessage(from, buffertt, image, {quoted: mek, caption: 'loli'})
 					} catch (e) {
@@ -2982,7 +2984,7 @@ if (isBanned) return reply(mess.only.benned)
 				if (!isUser) return reply(mess.only.userB)
 				
 					reply(mess.wait)
-					anu = await fetchJson(`https://api.vhtear.com/randomwibu&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/randomwibu&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
 					bufferhh = await getBuffer(anu.result.foto)
 					wibu = ` ➸ *nama* ${anu.result.nama} ➸ *deskripsi* ${anu.result.deskripsi}`
@@ -2993,7 +2995,7 @@ if (isBanned) return reply(mess.only.benned)
 				if (!isUser) return reply(mess.only.userB)
 				
 					reply(mess.wait)
-					anu = await fetchJson(`https://api.vhtear.com/nhentaipdfdownload?query=287167&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/nhentaipdfdownload?query=287167&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
 					bufferjj = await getBuffer(anu.result.pdf_file)
 					client.sendMessage(from, bufferjj, document, {mimetype: 'document/pdf', quoted: mek})
@@ -3017,7 +3019,7 @@ if (isBanned) return reply(mess.only.benned)
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					reply(mess.wait)
-					anu = await fetchJson(`https://api.vhtear.com/randomcat?apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/randomcat?apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
 					bufferkk = await getBuffer(anu.result.url)
 					client.sendMessage(from, bufferkk, image, {quoted: mek})
@@ -3041,7 +3043,7 @@ if (isBanned) return reply(mess.only.benned)
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					reply(mess.wait)
-					anu = await fetchJson(`https://api.vhtear.com/mlherolist?apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/mlherolist?apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					icon = await getBuffer(anu.icon)
 					client.sendMessage(from, icon, image, {quoted: mek})
 					break
@@ -3439,7 +3441,7 @@ if (isBanned) return reply(mess.only.benned)
 				
 					if (args.length < 1) return reply('teks nya mana om')
 					kj = body.slice(12)
-					anu = await fetchJson(`https://api.vhtear.com/nomerhoki?no=${kj}&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/nomerhoki?no=${kj}&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					reply(anu.result.hasil)
 					break
 				case 'textscreen':
@@ -3448,7 +3450,7 @@ if (isBanned) return reply(mess.only.benned)
 				
 					if (args.length < 1) return reply('teks nya mana om')
 					telsjk = body.slice(9)
-					anu = await fetchJson(`https://api.vhtear.com/textscreen?query=${telsjk}&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/textscreen?query=${telsjk}&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					reply(anu.result.text)
 					break
 			    case 'joox':
@@ -3510,7 +3512,7 @@ if (isBanned) return reply(mess.only.benned)
 				if (!isUser) return reply(mess.only.userB)
 					if (!isGroup) return reply(mess.only.group)
 					reply(mess.asik)
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=hewanimutlucu&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=hewanimutlucu&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					var mi = JSON.parse(JSON.stringify(anu.result));
 					var ku =  mi[Math.floor(Math.random() * mi.length)];
 					nye = await getBuffer(ku)
@@ -3558,7 +3560,7 @@ if (isBanned) return reply(mess.only.benned)
 				if (!isUser) return reply(mess.only.userB)
                 
                    teks = body.slice(5)
-                   anu = await fetchJson(`http://api-melodicxt.herokuapp.com/api/githubprofile?user=${teks}&apikey=administrator)`, {method: 'get'})
+                   anu = await fetchJson(`http://api-melodicxt.herokuapp.com/api/githubprofile?user=${teks}&apikey=28fd9af1-b543-416a-92bc-c943f6cda6b1)`, {method: 'get'})
                    if (anu.error) return reply(anu.error)
                    bufferjjj = await getBuffer(anu.avatar_url)
                    hasil = ` *username* \n ${anu.followers} *following* \n${anu.following} *bio* \n${anu.bio} *public_repos* \n${anu.public_repos} *created_at* \n${anu.created_at} *updated_at* \n${anu.updated_at}`
@@ -3570,7 +3572,7 @@ if (isBanned) return reply(mess.only.benned)
 					tels = body.slice(9)
 					if (tels.ength > 10) return reply('Teksnya kepanjangan, maksimal 9 karakter')
 					reply(mess.wait)
-					anu = await fetchJson(`http://api-melodicxt.herokuapp.com/api/txtcustom?theme=theme=matrix=${tels}&apiKey=administrator`, {method: 'get'})
+					anu = await fetchJson(`http://api-melodicxt.herokuapp.com/api/txtcustom?theme=theme=matrix=${tels}&apiKey=28fd9af1-b543-416a-92bc-c943f6cda6b1`, {method: 'get'})
 					buff = await getBuffer(anu.result)
 					client.sendMessage(from, buff, image, {quoted: mek})
 					break
@@ -3578,7 +3580,7 @@ if (isBanned) return reply(mess.only.benned)
                 if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
                 
-                   anu = await fetchJson(`https://mhankbarbars.herokuapp.com/api/cuaca?q=${body.slice(6)}&apiKey=pJ6xKSMPCT8QMcvBzGFY`, {method: 'get'})
+                   anu = await fetchJson(`https://mhankbarbars.herokuapp.com/api/cuaca?q=${body.slice(6)}&apiKey=ar929282iwiwi62627uq`, {method: 'get'})
                    if (anu.error) return reply(anu.error)
                    hasil = ` *Tempat : ${anu.data.result.tempat}\nCuaca : ${anu.data.result.cuaca}\nAngin : ${anu.data.result.angin}\nSuhu : ${anu.data.result.suhu}\nKelembapan : ${anu.data.result.kelembapan}`
                    client.sendMessage(from, hasil, text, {quoted: mek})
@@ -3587,7 +3589,7 @@ if (isBanned) return reply(mess.only.benned)
                 
 if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
-					anu = await fetchJson(`https://api.vhtear.com/tebakgambar&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/tebakgambar&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					bufferkkk = await getBuffer(anu.result.soalImg)
 					setTimeout( () => {
 					client.sendMessage(from, '*➸ Jawaban :* '+anu.result.jawaban, text, {quoted: mek}) // ur cods
@@ -3609,7 +3611,7 @@ if (isBanned) return reply(mess.only.benned)
                 if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
                 
-					anu = await fetchJson(`https://api.vhtear.com/funkuis&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/funkuis&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					setTimeout( () => {
 					client.sendMessage(from, '*➸ Jawaban :* '+anu.result.jawaban+'\n'+anu.result.desk, text, {quoted: mek}) // ur cods
 					}, 30000) // 1000 = 1s,
@@ -3630,7 +3632,7 @@ if (isBanned) return reply(mess.only.benned)
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 				
-					anu = await fetchJson(`https://api.vhtear.com/family100&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/family100&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					setTimeout( () => {
 					client.sendMessage(from, '*➸ Jawaban :* '+anu.result.jawaban, text, {quoted: mek}) // ur cods
 					}, 30000) // 1000 = 1s,
@@ -3673,7 +3675,7 @@ if (isBanned) return reply(mess.only.benned)
 				if (!isUser) return reply(mess.only.userB)
                 
 					if (args.length < 1) return reply('Apa yang mau dicari um?')
-					anu = await fetchJson(`https://api.vhtear.com/branly?query=${body.slice(9)}&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/branly?query=${body.slice(9)}&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					reply(anu.result.data)
 					break
                 case 'image':
@@ -3682,7 +3684,7 @@ if (isBanned) return reply(mess.only.benned)
                 
 					if (args.length < 1) return reply('Apa yang mau dicari kak?')
 					goo = body.slice(7)
-					anu = await fetchJson(`https://api.vhtear.com/googleimg?query=${goo}&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/googleimg?query=${goo}&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					reply(mess.wait)
 				    var pol = JSON.parse(JSON.stringify(anu.result.result_search));
                     var tes2 =  pol[Math.floor(Math.random() * pol.length)];
@@ -3769,7 +3771,7 @@ if (isBanned) return reply(mess.only.benned)
 				
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=elang&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=elang&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					var eln = JSON.parse(JSON.stringify(anu.result));
 					var elnn =  eln[Math.floor(Math.random() * eln.length)];
 					nyer = await getBuffer(elnn)
@@ -3780,7 +3782,7 @@ if (isBanned) return reply(mess.only.benned)
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					if (!isAnime) return reply('❌ *Harus Mengaktifkan Mode Anime* ❌')
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=naruto&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=naruto&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					var naru = JSON.parse(JSON.stringify(anu.result));
 					var to =  naru[Math.floor(Math.random() * naru.length)];
 					nyew = await getBuffer(to)
@@ -3790,7 +3792,7 @@ if (isBanned) return reply(mess.only.benned)
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					if (!isAnime) return reply('❌ *Harus Mengaktifkan Mode Anime* ❌')
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=minato&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=minato&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					var min = JSON.parse(JSON.stringify(anu.result));
 					var ato =  min[Math.floor(Math.random() * min.length)];
 					nyeq = await getBuffer(ato)
@@ -3800,7 +3802,7 @@ if (isBanned) return reply(mess.only.benned)
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					if (!isAnime) return reply('❌ *Harus Mengaktifkan Mode Anime* ❌')
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=boruto&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=boruto&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					var bor = JSON.parse(JSON.stringify(anu.result));
 					var uto =  bor[Math.floor(Math.random() * bor.length)];
 					nyet = await getBuffer(uto)
@@ -3810,7 +3812,7 @@ if (isBanned) return reply(mess.only.benned)
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					if (!isAnime) return reply('❌ *Harus Mengaktifkan Mode Anime* ❌')
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=hinata&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=hinata&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					var hina = JSON.parse(JSON.stringify(anu.result));
 					var ta =  hina[Math.floor(Math.random() * hina.length)];
 					nyei = await getBuffer(ta)
@@ -3820,7 +3822,7 @@ if (isBanned) return reply(mess.only.benned)
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					if (!isAnime) return reply('❌ *Harus Mengaktifkan Mode Anime* ❌')
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=sasuke&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=sasuke&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					var sasu = JSON.parse(JSON.stringify(anu.result));
 					var ke =  sasu[Math.floor(Math.random() * sasu.length)];
 					nyeo = await getBuffer(ke)
@@ -3830,7 +3832,7 @@ if (isBanned) return reply(mess.only.benned)
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					if (!isAnime) return reply('❌ *Harus Mengaktifkan Mode Anime* ❌')
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=sakura&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=sakura&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					var sak = JSON.parse(JSON.stringify(anu.result));
 					var kura =  sak[Math.floor(Math.random() * sak.length)];
 					nyep = await getBuffer(kura)
@@ -3840,7 +3842,7 @@ if (isBanned) return reply(mess.only.benned)
 				case 'unta':
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=unta&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=unta&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					var unt1 = JSON.parse(JSON.stringify(anu.result));
 					var unt2 =  unt1[Math.floor(Math.random() * unt1.length)];
 					nyea = await getBuffer(unt2)
@@ -3851,7 +3853,7 @@ if (isBanned) return reply(mess.only.benned)
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					if (!isAnime) return reply('❌ *Harus Mengaktifkan Mode Anime* ❌')
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=kaneki&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=kaneki&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					var kan = JSON.parse(JSON.stringify(anu.result));
 					var eki =  kan[Math.floor(Math.random() * kan.length)];
 					nyes = await getBuffer(eki)
@@ -3861,7 +3863,7 @@ if (isBanned) return reply(mess.only.benned)
 					if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					if (!isAnime) return reply('❌ *Harus Mengaktifkan Mode Anime* ❌')
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=hewanimut&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=hewanimut&apikey=ar929282iwiwi62627uq, {method: 'get'})
 					var kan = JSON.parse(JSON.stringify(anu.result));
 					var eki =  kan[Math.floor(Math.random() * kan.length)];
 					nyed = await getBuffer(eki)
@@ -3871,7 +3873,7 @@ if (isBanned) return reply(mess.only.benned)
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					if (!isAnime) return reply('❌ *Harus Mengaktifkan Mode Anime* ❌')
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=ToukaKirishima&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=ToukaKirishima&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					var tou = JSON.parse(JSON.stringify(anu.result));
 					var ka =  tou[Math.floor(Math.random() * tou.length)];
 					nyef = await getBuffer(ka)
@@ -3881,7 +3883,7 @@ if (isBanned) return reply(mess.only.benned)
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					if (!isAnime) return reply('❌ *Harus Mengaktifkan Mode Anime* ❌')
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=RizeKamishiro&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=RizeKamishiro&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					var ri = JSON.parse(JSON.stringify(anu.result));
 					var ze =  ri[Math.floor(Math.random() * ri.length)];
 					nyeg = await getBuffer(ze)
@@ -3891,7 +3893,7 @@ if (isBanned) return reply(mess.only.benned)
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					if (!isAnime) return reply('❌ *Harus Mengaktifkan Mode Anime* ❌')
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=akiramado&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=akiramado&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					var ak = JSON.parse(JSON.stringify(anu.result));
 					var ara =  ak[Math.floor(Math.random() * ak.length)];
 					nyeh = await getBuffer(ara)
@@ -3901,7 +3903,7 @@ if (isBanned) return reply(mess.only.benned)
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					if (!isAnime) return reply('❌ *Harus Mengaktifkan Mode Anime* ❌')
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=itori&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=itori&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					var it = JSON.parse(JSON.stringify(anu.result));
 					var ori =  it[Math.floor(Math.random() * it.length)];
 					nyej = await getBuffer(ori)
@@ -3926,7 +3928,7 @@ if (isBanned) return reply(mess.only.benned)
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					if (!isAnime) return reply('❌ *Harus Mengaktifkan Mode Anime* ❌')
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=kurumitokisakikawai&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=kurumitokisakikawai&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					var kur = JSON.parse(JSON.stringify(anu.result));
 					var imi =  kur[Math.floor(Math.random() * kur.length)];
 					nyek = await getBuffer(imi)
@@ -3936,7 +3938,7 @@ if (isBanned) return reply(mess.only.benned)
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					if (!isAnime) return reply('❌ *Harus Mengaktifkan Mode Anime* ❌')
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=Nakanomiku&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=Nakanomiku&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					var mi = JSON.parse(JSON.stringify(anu.result));
 					var ku =  mi[Math.floor(Math.random() * mi.length)];
 					nyel = await getBuffer(ku)
@@ -3946,7 +3948,7 @@ if (isBanned) return reply(mess.only.benned)
 					if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					if (!isAnime) return reply('❌ *Harus Mengaktifkan Mode Anime* ❌')
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=remrezero&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=remrezero&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					var mi = JSON.parse(JSON.stringify(anu.result));
 					var ku =  mi[Math.floor(Math.random() * mi.length)];
 					nyez = await getBuffer(ku)
@@ -3956,7 +3958,7 @@ if (isBanned) return reply(mess.only.benned)
 					if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					if (!isAnime) return reply('❌ *Harus Mengaktifkan Mode Anime* ❌')
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=ramrezero&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=ramrezero&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					var mi = JSON.parse(JSON.stringify(anu.result));
 					var ku =  mi[Math.floor(Math.random() * mi.length)];
 					nyex = await getBuffer(ku)
@@ -3966,7 +3968,7 @@ if (isBanned) return reply(mess.only.benned)
 					if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					if (!isNsfw) return reply('❌ *Harus Mengaktifkan Mode Nsfw* ❌')
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=bokep&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=bokep&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					var mi = JSON.parse(JSON.stringify(anu.result));
 					var ku =  mi[Math.floor(Math.random() * mi.length)];
 					nyec = await getBuffer(ku)
@@ -3980,7 +3982,7 @@ if (isBanned) return reply(mess.only.benned)
 				if (!isUser) return reply(mess.only.userB)
 					if (!isGroup) return reply(mess.only.group)
 					reply(mess.asik)
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=cewekcantik&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=cewekcantik&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					var mi = JSON.parse(JSON.stringify(anu.result));
 					var ku =  mi[Math.floor(Math.random() * mi.length)];
 					nyev = await getBuffer(ku)
@@ -3994,7 +3996,7 @@ if (isBanned) return reply(mess.only.benned)
 				if (!isUser) return reply(mess.only.userB)
 					if (!isGroup) return reply(mess.only.group)
 					reply(mess.asik)
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=cowokganteng&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=cowokganteng&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					var mi = JSON.parse(JSON.stringify(anu.result));
 					var ku =  mi[Math.floor(Math.random() * mi.length)];
 					nyeb = await getBuffer(ku)
@@ -4041,7 +4043,7 @@ if (isBanned) return reply(mess.only.benned)
                 if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					if (args.length < 1) return reply(mess.search)
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=hewan&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=hewan&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					reply(mess.wait)
 					var pin = JSON.parse(JSON.stringify(anu.result));
 					var trest =  pin[Math.floor(Math.random() * pin.length)];
@@ -4053,7 +4055,7 @@ if (isBanned) return reply(mess.only.benned)
 				if (!isUser) return reply(mess.only.userB)
 					if (!isGroup) return reply(mess.only.group)
 					reply(mess.asik)
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=lolikawai&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=lolikawai&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					var mi = JSON.parse(JSON.stringify(anu.result));
 					var ku =  mi[Math.floor(Math.random() * mi.length)];
 					nyen = await getBuffer(ku)
@@ -4064,7 +4066,7 @@ if (isBanned) return reply(mess.only.benned)
 				if (!isUser) return reply(mess.only.userB)
 					if (!isGroup) return reply(mess.only.group)
 					reply(mess.asik)
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=waifukawai&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=waifukawai&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					var mi = JSON.parse(JSON.stringify(anu.result));
 					var ku =  mi[Math.floor(Math.random() * mi.length)];
 					nyem = await getBuffer(ku)
@@ -4075,7 +4077,7 @@ if (isBanned) return reply(mess.only.benned)
 				if (!isUser) return reply(mess.only.userB)
 					if (!isGroup) return reply(mess.only.group)
 					reply(mess.asik)
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=nekoanimekawai&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=nekoanimekawai&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					var mi = JSON.parse(JSON.stringify(anu.result));
 					var ku =  mi[Math.floor(Math.random() * mi.length)];
 					nyeqq = await getBuffer(ku)
@@ -4086,7 +4088,7 @@ if (isBanned) return reply(mess.only.benned)
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					if (!isNsfw) return reply('❌ *FALSE* ❌')
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=animehentai&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=animehentai&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					var hen = JSON.parse(JSON.stringify(anu.result));
 					var tai =  hen[Math.floor(Math.random() * hen.length)];
 					nyeww = await getBuffer(tai)
@@ -4096,7 +4098,7 @@ if (isBanned) return reply(mess.only.benned)
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 					if (!isAnime) return reply('❌ *Harus Mengaktifkan Mode Anime* ❌')
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=loli&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=loli&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					var lol = JSON.parse(JSON.stringify(anu.result));
 					var i2 =  lol[Math.floor(Math.random() * lol.length)];
 					nyeee = await getBuffer(i2)
@@ -4119,7 +4121,7 @@ if (isBanned) return reply(mess.only.benned)
                 
 					if (args.length < 1) return reply(mess.search)
 					pinte = body.slice(11)
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=${pin}&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=${pin}&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					reply(mess.wait)
 					var pin = JSON.parse(JSON.stringify(anu.result));
 					var trest =  pin[Math.floor(Math.random() * pin.length)];
@@ -4209,7 +4211,7 @@ if (isBanned) return reply(mess.only.benned)
 					if (args.length < 1) return reply('Urlnya mana um?')
 					if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply(mess.error.Iv)
 					reply(mess.wait)
-					anu = await fetchJson(`https://api.vhtear.com/tiktokdl?link=https://vt.tiktok.com/yqyjPX/&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/tiktokdl?link=https://vt.tiktok.com/yqyjPX/&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, video, {quoted: mek})
@@ -4352,7 +4354,7 @@ if (isBanned) return reply(mess.only.benned)
 					if (args.length < 1) return reply('Yang mau di tulis apaan?')
 					tulis = body.slice(6)
 					reply(mess.wait)
-					buffer4 = await getBuffer(`https://api.vhtear.com/write?text=${tulis}&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					buffer4 = await getBuffer(`https://api.vhtear.com/write?text=${tulis}&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					client.sendMessage(from, buffer4, image, {quoted: mek, caption: 'Ketahuan guru mampus lu'})
 					break
 				case 'text3d':
@@ -4371,7 +4373,7 @@ if (isBanned) return reply(mess.only.benned)
               	    if (args.length < 1) return reply('teksnya mana kak?')
                     teks = `${body.slice(8)}`
                     if (teks.length > 10) return client.sendMessage(from, 'Teksnya kepanjangan, Maksimal 10 kalimat', text, {quoted: mek})
-                    buffer6 = await getBuffer(`https://api.vhtear.com/lovemessagetext?text=${teks}&apikey=Jsieu8287362jshre82`, {method: 'get'})
+                    buffer6 = await getBuffer(`https://api.vhtear.com/lovemessagetext?text=${teks}&apikey=ar929282iwiwi62627uq`, {method: 'get'})
                     client.sendMessage(from, buffer6, image, {quoted: mek, caption: `${teks}`})
 			     	break
 			     case 'airtext':
@@ -4380,7 +4382,7 @@ if (isBanned) return reply(mess.only.benned)
               	    if (args.length < 1) return reply('teksnya mana kak?')
                     teks = `${body.slice(8)}`
                     if (teks.length > 10) return client.sendMessage(from, 'Teksnya kepanjangan, Maksimal 10 kalimat', text, {quoted: mek})
-                    buffer6 = await getBuffer(`https://api.vhtear.com/water_maker?text=${teks}&apikey=Jsieu8287362jshre82`, {method: 'get'})
+                    buffer6 = await getBuffer(`https://api.vhtear.com/water_maker?text=${teks}&apikey=ar929282iwiwi62627uq`, {method: 'get'})
                     client.sendMessage(from, buffer6, image, {quoted: mek, caption: `${teks}`})
 			     	break
 			     case 'kuncitext':
@@ -4389,7 +4391,7 @@ if (isBanned) return reply(mess.only.benned)
               	    if (args.length < 1) return reply('teksnya mana kak?')
                     teks = `${body.slice(8)}`
                     if (teks.length > 10) return client.sendMessage(from, 'Teksnya kepanjangan, Maksimal 10 kalimat', text, {quoted: mek})
-                    buffer6 = await getBuffer(`https://api.vhtear.com/padlock?text1=${teks}&text2=${teks}&apikey=Jsieu8287362jshre82`, {method: 'get'})
+                    buffer6 = await getBuffer(`https://api.vhtear.com/padlock?text1=${teks}&text2=${teks}&apikey=ar929282iwiwi62627uq`, {method: 'get'})
                     client.sendMessage(from, buffer6, image, {quoted: mek, caption: `${teks}`})
 			     	break
 			    case 'shorturl':
@@ -4426,7 +4428,7 @@ if (isBanned) return reply(mess.only.benned)
 					if (args.length < 1) return reply('Masukan username mu!!')
 					ige = body.slice(9)
 					reply(mess.wait)
-					anu = await fetchJson(`https://api.vhtear.com/igprofile?query=${ige}&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/igprofile?query=${ige}&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					buffer7 = await getBuffer(anu.result.picture)
 					capt = `User Ditemukan!!\n\n*➸ Nama :* ${anu.result.full_name}\n*➸ Username :* ${anu.result.username}\n*➸ Followers :* ${anu.result.follower}\n*➸ Mengikuti :* ${anu.result.follow}\n*➸ Jumlah Post :* ${anu.result.post_count}\n*➸ Private :* ${anu.result.is_private}\n*➸ Bio :* ${anu.result.biography}`
 					client.sendMessage(from, buffer7, image, {quoted: mek, caption: capt})
@@ -4461,7 +4463,7 @@ if (isBanned) return reply(mess.only.benned)
 					if (args.length < 1) return reply('Masukan nama mobil!!')
 					ige = body.slice(9)
 					reply(mess.wait)
-					anu = await fetchJson(`https://api.vhtear.com/infomobil?merk=${ige}&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/infomobil?merk=${ige}&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					buffer0 = await getBuffer(anu.result.image)
 					capt = `mobil Ditemukan!!\n\n*➸ title :* ${anu.result.title}\n*➸ harga :* ${anu.result.harga}\n*➸ kekurangan :* ${anu.result.kekurangan}\n*➸ kelebihan :* ${anu.result.kelebihan}`
 					client.sendMessage(from, buffer0, image, {quoted: mek, caption: capt})
@@ -4472,7 +4474,7 @@ if (isBanned) return reply(mess.only.benned)
 					if (args.length < 1) return reply('Masukan nama motor!!')
 					ft1 = body.slice(11)
 					reply(mess.wait)
-					anu = await fetchJson(`https://api.vhtear.com/infomotor?merk=${ft1}&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/infomotor?merk=${ft1}&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					buffer11 = await getBuffer(anu.result.image)
 					cptr = `motor Ditemukan!!\n\n*➸ title :* ${anu.result.title}\n*➸ harga :* ${anu.result.harga}\n*➸ spesifikasi :* ${anu.result.spesifikasi}\n*➸ kekurangan :* ${anu.result.kekurangan}\n*➸ kelebihan :* ${anu.result.kelebihan}`
 					client.sendMessage(from, buffer11, image, {quoted: mek, caption: cptr})
@@ -4482,7 +4484,7 @@ if (isBanned) return reply(mess.only.benned)
 				if (!isUser) return reply(mess.only.userB)
 					kuji = body.slice(7)
 					reply(mess.wait)
-					anu = await getBuffer(`https://api.vhtear.com/playstore?query={kuji}&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await getBuffer(`https://api.vhtear.com/playstore?query={kuji}&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					capty = `*➸ title :* ${anu.title}\n*➸ app_id :* ${anu.app_id}\n*➸ description :* ${anu.description}\n*➸ developer_id :* ${anu.developer_id}\n*➸ developer :* ${anu.developer}\n*➸ score :* ${anu.score}\n*➸ full_price :* ${anu.full_price}\n*➸ price :* ${anu.price}\n*➸ free :* ${anu.free}`
 					client.sendMessage(from, anu, image, {quoted: mek, caption: capty})
 					break
@@ -4535,7 +4537,7 @@ if (isBanned) return reply(mess.only.benned)
 					if (args.length < 2) return reply('Urlnya mana um?')
 					if (!isUrl(args[1])) return reply(mess.error.Iv)
 					reply(mess.wait)
-					anu = await fetchJson(`https://mhankbarbars.herokuapp.com/api/url2image?tipe=${args[0]}&url=${args[1]}&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://mhankbarbars.herokuapp.com/api/url2image?tipe=${args[0]}&url=${args[1]}&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
 					buffer44 = await getBuffer(anu.result)
 					client.sendMessage(from, buffer44, image, {quoted: mek})
@@ -4545,7 +4547,7 @@ if (isBanned) return reply(mess.only.benned)
 					tels = body.slice(8)
 					if (tels.ength > 15) return reply('Teksnya kepanjangan, maksimal 20 karakter')
 					reply(mess.wait)
-					anu = await fetchJson(`https://api.vhtear.com/logoff?hero=alok&text=${tels}&apikey=Jsieu8287362jshre82`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/logoff?hero=alok&text=${tels}&apikey=ar929282iwiwi62627uq`, {method: 'get'})
 					buffer = await getBuffer(anu.result)
 					 client.sendMessage(from, buffer, image, {quoted: mek})
 					break
@@ -5022,7 +5024,7 @@ if (isBanned) return reply(mess.only.benned)
                     reply('*「 ANTI GROUP LINK 」*\nStatus : Nonaktif')
                 }
             } else {
-                reply('Pilih enable atau disable')
+                reply('......')
             }
             break    
 				case 'clone':

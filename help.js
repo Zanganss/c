@@ -1,12 +1,12 @@
 const help = (prefix) => { 
 	return `
 ╭▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂╮
-┃╭┅┈⪼ *EREN YEAGER BOT─╝*
+┃╭┅┈⪼ *EREN AKAME BOT─╝*
 ┊╰⧿─╗ *THANX TO ALLAH*
 ┊ ⛬ ╔╯ *VERSION : V4.104.020*
 ┠⧿⧿╯⧿⧿⧿⧿⧿⧿⧿⧿⧿⧿⧿⧿⧿⧿⧿⧿
-*┃⛨⧿✧ུNama : Eren Yeager BOT*
-*┃⛨⧿✧ུFounder : Arifi Razzaq*
+*┃⛨⧿✧ུNama : Akame Botz*
+*┃⛨⧿✧ུFounder : Zan Ganz*
 *┃⛨⧿✧ུStatus : ACTIVE*
 *┃⛨⧿✧ུPrefix : ❪ ${prefix} ❫*
 ╰⧿╗
@@ -125,10 +125,11 @@ const help = (prefix) => {
           ▉║█▐▉▉▐▐▍█║▍▉▏▍▍
           ▉║█▐▉▉▐▐▍█║▍▉▏▍▍
    
-             *© Arifi Razzaq*
+             *© Zan Ganteng*
              
 *Jangan Lupa Donasi ”_“*
-https://saweria.co/Arifirazzaq2001
+https://saweria.co/irzan
+Pulsa:085340827717
 `
 }
 exports.help = help

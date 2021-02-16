@@ -1,12 +1,12 @@
 const help = (prefix) => { 
 	return `
 ╭▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂╮
-*┃╭┅┈⪼ EREN YEAGER BOT─╝*
+*┃╭┅┈⪼ EREN AKAME BOT─╝*
 *┊╰⧿⧿─╗ THANX TO ALLAH*
 *┊ ⛬ ╔╯ VERSION : V3.104.020*
 ┠⧿⧿⧿╯⧿⧿⧿⧿⧿⧿⧿⧿⧿⧿⧿⧿⧿⧿⧿⧿
-┃⛨⧿✧ུNama : *Eren Yeager BOT*
-┃⛨⧿✧ུFounder : *Arifi Razzaq*
+┃⛨⧿✧ུNama : *Akame BOT*
+┃⛨⧿✧ུFounder : *Arifi Zan*
 ┃⛨⧿✧ུStatus : *ACTIVE*
 ┃⛨⧿✧ུPrefix : *❪ ${prefix} ❫*
 ╰⧿╗
@@ -109,7 +109,7 @@ const help = (prefix) => {
 - *${prefix}killerbee0 [Off]*
 - *penjelasan : ${prefix}jspkb*
 ┅─┅─┅─┅─┅─┅─┅─┅─┅─┅─ ❁۪۪
-● *EREN YEAGER BUSSINESS :*
+● *AKAME BUSSINESS :*
 
 ☐ *${prefix}kontakdeveloper*
 ☐ *${prefix}daftarmemberselebgram*
@@ -146,7 +146,7 @@ All. Creator Bot lainnya.
           ▉║█▐▉▉▐▐▍█║▍▉▏▍▍
           ▉║█▐▉▉▐▐▍█║▍▉▏▍▍
    
-             ©️ *Arifi Razzaq*
+             ©️ *Zan*
 
 `
 }

@@ -6,7 +6,7 @@ const help = (prefix) => {
 *┊ ⛬ ╔╯ VERSION : V3.104.020*
 ┠⧿⧿⧿╯⧿⧿⧿⧿⧿⧿⧿⧿⧿⧿⧿⧿⧿⧿⧿⧿
 ┃⛨⧿✧ུNama : *Akame BOT*
-┃⛨⧿✧ུFounder : *Arifi Zan*
+┃⛨⧿✧ུFounder :  *Zan Ganz*
 ┃⛨⧿✧ུStatus : *ACTIVE*
 ┃⛨⧿✧ུPrefix : *❪ ${prefix} ❫*
 ╰⧿╗

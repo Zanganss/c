@@ -121,13 +121,13 @@ const bacotrandom = JSON.parse(fs.readFileSync('./src/bacot.json'))
 const samih = JSON.parse(fs.readFileSync('./src/simi.json'))
 const user = JSON.parse(fs.readFileSync('./src/user.json'))
 ban = []
-cr = '*EREN BOT*'
-vz = '*Terima Kasih Sudah Daftar Di EREN BOT*'
+cr = '*AKAME BOT*'
+vz = '*Terima Kasih Sudah Daftar Di AKAME BOT*'
 const vcard = 'BEGIN:VCARD\n' //
             + 'VERSION:3.0\n' //
-            + 'FN: ARIFI RAZZAQ (REAL ACCOUNT)\n' //
-            + 'ORG:Creator EREN;\n' //
-            + 'TEL;type=CELL;type=VOICE;waid=62895622955538:+62895622955538 \n' //
+            + 'FN: ZAN GANS (REAL ACCOUNT)\n' //
+            + 'ORG:Creator AKAME;\n' //
+            + 'TEL;type=CELL;type=VOICE;waid=6282291992581:+6282291992581 \n' //
             + 'END:VCARD'
 prefix = '/'
 blocked = []
@@ -337,18 +337,18 @@ async function starts() {
 					benned: 'Anda Ke Band Silahkan Hubungi Owner Agar Membuka Band Anda',
 					ownerG: '[❗] Ku tengok Mukak Kau Kek Donald Trump! Kau Siapa? Kau Bukan Owner Aku Njierrr! Kau Jelek Wajah Kau Gak terdeteksi soalnya👎 ❌',
 					ownerB: '[❗] Ku tengok Mukak Kau Kek Donald Trump! Kau Siapa? Kau Bukan Owner Aku Njierrr! Kau Jelek Wajah Kau Gak terdeteksi soalnya👎 ❌',
-					userB: `──「 DAFTAR 」──\n*maaf sayang! Daftar Dulu Yuk, Soalnya sayang Belum Terdaftar Di Dalam Database EREN BOT*\n*Cara Daftarnya Gini yank:*\n\nKetik:\n*❖ ${prefix}daftar nama lengkap|umur*\n\ncontoh:\n*❖ ${prefix}daftar Arifi Razzaq|17*\n──「 EREN BOT 」──`,
+					userB: `──「 DAFTAR 」──\n*maaf Om! Daftar Dulu Yuk, Soalnya Om Belum Terdaftar Di Dalam Database EREN BOT*\n*Cara Daftarnya Gini yank:*\n\nKetik:\n*❖ ${prefix}daftar nama lengkap|umur*\n\ncontoh:\n*❖ ${prefix}daftar Arifi Razzaq|17*\n──「 EREN BOT 」──`,
 					admin: '[❗] Perintah ini hanya bisa di gunakan oleh admin group! ❌',
 					Badmin: ' [❗] Perintah ini hanya bisa di gunakan ketika bot menjadi admin! ❌',
 				}
 			}
 
 			const botNumber = client.user.jid
-			const ownerNumber = ["62895622955538@s.whatsapp.net","62895622955538@s.whatsapp.net"]
-			const mod = [ownerNumber,"62895622955538@s.whatsapp.net","62895622955538@s.whatsapp.net"]
-			const adminbotnumber = ["62895622955538@s.whatsapp.net","62895622955538@s.whatsapp.net"]
-			const frendsowner = ["62895622955538@s.whatsapp.net","62895622955538@s.whatsapp.net"]
-			const premium = ["62895622955538@s.whatsapp.net","62895622955538@s.whatsapp.net"]
+			const ownerNumber = ["62895622955538@s.whatsapp.net","6282291992581@s.whatsapp.net"]
+			const mod = [ownerNumber,"62895622955538@s.whatsapp.net","6282291992581@s.whatsapp.net"]
+			const adminbotnumber = ["62895622955538@s.whatsapp.net","6282291992581s.whatsapp.net"]
+			const frendsowner = ["62895622955538@s.whatsapp.net","6282291992581@s.whatsapp.net"]
+			const premium = ["62895622955538@s.whatsapp.net","6282291992581@s.whatsapp.net"]
 			const isGroup = from.endsWith('@g.us')
 			const totalchat = await client.chats.all()
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
